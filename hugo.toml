@@ -1,4 +1,5 @@
-baseURL = "https://cyberdeck-ai-knowledge-system.org/"
+baseURL = "https://iboneumann.github.io/The-Cyberdeck---AI-Knoweldge-System/"
+canonifyURLs = true
 languageCode = "en-us"
 title = "The Cyberdeck - AI Knowledge System"
 theme = "hugo-dead-simple"
