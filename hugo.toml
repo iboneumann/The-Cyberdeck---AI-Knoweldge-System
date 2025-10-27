@@ -1,4 +1,5 @@
-baseURL = "https://iboneumann.github.io/The-Cyberdeck---AI-Knoweldge-System/"
+#baseURL = "https://iboneumann.github.io/The-Cyberdeck---AI-Knoweldge-System/"
+baseURL = "http://localhost:1313"
 canonifyURLs = true
 languageCode = "en-us"
 title = "The Cyberdeck - AI Knowledge System"
@@ -7,6 +8,7 @@ theme = "hugo-dead-simple"
 [params]
   description = "Research on AI Computing and RAG systems"
   author = "ibo neumann"
+  centerTitle = true
 
 [taxonomies]
   tag = "tags"
