@@ -6,158 +6,189 @@
         <strong>{{ .Title }}</strong>
     </div>
 
-    <!-- Chapter List -->
+    <!-- Chapter List - Clean, no lines -->
     <ul class="chapter-list">
-        {{ range where .Site.Pages "Type" "posts"}}
+        {{ range (where .Site.Pages "Type" "posts").ByWeight }}
         {{ if not .Draft }}
         <li class="chapter-item {{ if eq . $.Page }}active{{ end }}">
             <a href="{{ .Permalink }}" class="chapter-link">
                 {{ .Title }}
             </a>
-            {{ if .Description }}
-            <div class="chapter-desc">{{ .Description }}</div>
-            {{ end }}
         </li>
         {{ end }}
         {{ end }}
     </ul>
 
-    <!-- Progress indicator (optional) -->
+    <!-- Progress indicator -->
     <div class="progress-section">
         <div class="progress-label">Thesis Progress</div>
         <div class="progress-bar">
             <div class="progress-fill" style="width: 25%"></div>
         </div>
-        <div class="progress-text">Test Phase</div>
+        <div class="progress-text">Work In Progress</div>
     </div>
 
+    <!-- Bitcoin Donation Button -->
     <div class="donation-section">
-    <h3>Support This Research</h3>
-    <a href="bitcoin:1kTY7Lp8YinDJztxD8XcTTgf5qdWEeoWh" class="donate-button">
-        <span class="donate-icon">₿</span>
-        Donate via Bitcoin
-    </a>
-    <!-- Optional QR Code -->
-    <div class="qr-code">
-        <img src="/images/mybitcoinQR.png" alt="Bitcoin QR Code" style="max-width: 100%; margin-top: 0.5rem;">
+        <h3>Support This Research</h3>
+        <a href="bitcoin:1kTY7Lp8YinDJztxD8XcTTgf5qdWEeoWh" class="donate-button">
+            <span class="donate-icon">₿</span>
+            Donate via Bitcoin
+        </a>
+        <div class="qr-code">
+            <img src="/images/mybitcoinQR.png" alt="Bitcoin QR Code">
+        </div>
+        <p class="donate-note">Help support open AI research</p>
     </div>
-    <p class="donate-note">Help support open AI research</p>
-</div>
 </nav>
 
 <style>
-/* Update text colors for dark background */
+/* Deep Dark Color Scheme - Clean & Readable */
+:root {
+  --bg-sidebar: #0d1117;      /* Very dark grey - GitHub dark mode */
+  --bg-secondary: #161b22;    /* Slightly lighter dark */
+  --text-primary: #f0f6fc;    /* Bright white for text */
+  --text-secondary: #8b949e;  /* Muted grey for secondary */
+  --accent-primary: #58a6ff;  /* GitHub blue */
+  --accent-hover: #79c0ff;    /* Lighter blue for hover */
+}
+
+/* Main sidebar - Very dark grey */
+.left-sidebar {
+    background: var(--bg-sidebar) !important;
+    border-right: 1px solid #30363d;
+    padding: 2rem 1.5rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Sidebar content */
 .chapter-nav {
-    background: #472110;
     font-size: 0.9rem;
-    color: #f0f0f0;  /* Light text for dark background */
+    color: var(--text-primary);
 }
 
 .chapter-nav h3 {
     margin: 0 0 1.5rem 0;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #d4af37;  /* Gold accent instead of blue */
-    color: #ffffff;  /* White for headings */
+    border-bottom: 2px solid var(--accent-primary);
+    color: var(--text-primary);
+    font-size: 1.1rem;
 }
 
 .current-chapter {
-    background: #5a382f;  /* Lighter brown for current chapter */
-    color: #ffffff;
+    background: var(--accent-primary);
+    color: white;
     padding: 0.75rem;
     border-radius: 4px;
     margin-bottom: 1.5rem;
     font-size: 0.85rem;
 }
 
+/* CLEAN LIST - No lines between items */
+.chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    line-height: 1;
+}
+
+.chapter-item {
+    margin-bottom: 0;
+    padding: 0;
+    /* NO BORDERS - removed all border properties */
+}
+
+.chapter-item.active {
+    border-left: 3px solid var(--accent-primary);
+    padding-left: 0.75rem;
+    margin-left: -0.75rem;
+    background: rgba(88, 166, 255, 0.1); /* Subtle active background */
+}
+
 .chapter-link {
     text-decoration: none;
-    color: #f0f0f0;  /* Light grey for links */
+    color: var(--text-primary);
     font-weight: 500;
     display: block;
+    padding: 0.3rem 0;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+    line-height: 1.2; /* Tight line height */
+    margin: 0; /* Ensure no margin */
 }
 
 .chapter-link:hover {
-    color: #d4af37;  /* Gold on hover */
+    color: var(--accent-hover);
 }
 
+/* Remove chapter descriptions for cleaner look */
 .chapter-desc {
-    font-size: 0.8rem;
-    color: #cccccc;  /* Lighter grey for descriptions */
-    margin-top: 0.25rem;
-    line-height: 1.3;
+    display: none;
 }
 
+/* Progress section */
 .progress-section {
-    background: #5a382f;  /* Lighter brown for progress section */
+    background: var(--bg-secondary);
     padding: 1rem;
     border-radius: 6px;
-    border: 1px solid #7a584f;
+    border: 1px solid #30363d;
+    margin-top: 1.5rem;
 }
 
 .progress-label {
     font-size: 0.8rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: var(--text-primary);
+}
+
+.progress-bar {
+    background: #30363d;
+    border-radius: 10px;
+    height: 6px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: var(--accent-primary);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
 }
 
 .progress-text {
     font-size: 0.75rem;
-    color: #cccccc;
+    color: var(--text-secondary);
     text-align: center;
 }
 
-/* If you have recent posts list */
-.sidebar-list a {
-    text-decoration: none;
-    color: #f0f0f0;  /* Light color for dark background */
-    font-weight: 500;
-}
-
-.sidebar-list a:hover {
-    color: #d4af37;
-}
-
-/* Tag styling for dark background */
-.tag {
-    background: #5a382f;
-    color: #f0f0f0;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.875rem;
-    border: 1px solid #7a584f;
-}
-
-.tag:hover {
-    background: #7a584f;
-    color: #ffffff;
-}
-
-/* Donation Section Styles */
+/* Donation section */
 .donation-section {
-    background: #5a382f;
+    background: var(--bg-secondary);
     padding: 1.5rem;
     border-radius: 6px;
-    border: 1px solid #7a584f;
+    border: 1px solid #30363d;
     margin-top: 1.5rem;
     text-align: center;
 }
 
 .donation-section h3 {
     margin: 0 0 1rem 0;
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 1rem;
     border-bottom: none;
-    padding-bottom: 0;
 }
 
 .donate-button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: #f7931a; /* Bitcoin orange */
-    color: #ffffff;
+    background: var(--accent-primary);
+    color: white;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
@@ -168,9 +199,8 @@
 }
 
 .donate-button:hover {
-    background: #e07b0e;
+    background: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .donate-icon {
@@ -180,20 +210,16 @@
 
 .donate-note {
     font-size: 0.75rem;
-    color: #cccccc;
+    color: var(--text-secondary);
     margin: 0.5rem 0 0 0;
     line-height: 1.3;
 }
 
-.qr-code {
-    margin: 0.5rem 0;
-}
-
 .qr-code img {
     border-radius: 4px;
-    border: 2px solid #7a584f;
+    border: 2px solid #30363d;
+    max-width: 100%;
+    margin-top: 0.5rem;
 }
-
 </style>
-
 
