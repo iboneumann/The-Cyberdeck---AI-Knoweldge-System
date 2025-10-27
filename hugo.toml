@@ -1,0 +1,18 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My AI Cyberdeck'
+theme = "hugo-dead-simple"
+
+[params]
+  description = "My research on AI Computing and Machine Learning"
+  author = "J4v"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 10
+
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 20

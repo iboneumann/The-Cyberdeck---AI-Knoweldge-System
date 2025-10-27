@@ -1,0 +1,199 @@
+<nav class="chapter-nav">
+    <h3>Table of Contents</h3>
+    
+    <!-- Current Chapter -->
+    <div class="current-chapter">
+        <strong>{{ .Title }}</strong>
+    </div>
+
+    <!-- Chapter List -->
+    <ul class="chapter-list">
+        {{ range where .Site.Pages "Type" "posts"}}
+        {{ if not .Draft }}
+        <li class="chapter-item {{ if eq . $.Page }}active{{ end }}">
+            <a href="{{ .Permalink }}" class="chapter-link">
+                {{ .Title }}
+            </a>
+            {{ if .Description }}
+            <div class="chapter-desc">{{ .Description }}</div>
+            {{ end }}
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+
+    <!-- Progress indicator (optional) -->
+    <div class="progress-section">
+        <div class="progress-label">Thesis Progress</div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
+        </div>
+        <div class="progress-text">Test Phase</div>
+    </div>
+
+    <div class="donation-section">
+    <h3>Support This Research</h3>
+    <a href="bitcoin:1kTY7Lp8YinDJztxD8XcTTgf5qdWEeoWh" class="donate-button">
+        <span class="donate-icon">₿</span>
+        Donate via Bitcoin
+    </a>
+    <!-- Optional QR Code -->
+    <div class="qr-code">
+        <img src="/images/mybitcoinQR.png" alt="Bitcoin QR Code" style="max-width: 100%; margin-top: 0.5rem;">
+    </div>
+    <p class="donate-note">Help support open AI research</p>
+</div>
+</nav>
+
+<style>
+/* Update text colors for dark background */
+.chapter-nav {
+    background: #472110;
+    font-size: 0.9rem;
+    color: #f0f0f0;  /* Light text for dark background */
+}
+
+.chapter-nav h3 {
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d4af37;  /* Gold accent instead of blue */
+    color: #ffffff;  /* White for headings */
+}
+
+.current-chapter {
+    background: #5a382f;  /* Lighter brown for current chapter */
+    color: #ffffff;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.chapter-link {
+    text-decoration: none;
+    color: #f0f0f0;  /* Light grey for links */
+    font-weight: 500;
+    display: block;
+}
+
+.chapter-link:hover {
+    color: #d4af37;  /* Gold on hover */
+}
+
+.chapter-desc {
+    font-size: 0.8rem;
+    color: #cccccc;  /* Lighter grey for descriptions */
+    margin-top: 0.25rem;
+    line-height: 1.3;
+}
+
+.progress-section {
+    background: #5a382f;  /* Lighter brown for progress section */
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #7a584f;
+}
+
+.progress-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: #cccccc;
+    text-align: center;
+}
+
+/* If you have recent posts list */
+.sidebar-list a {
+    text-decoration: none;
+    color: #f0f0f0;  /* Light color for dark background */
+    font-weight: 500;
+}
+
+.sidebar-list a:hover {
+    color: #d4af37;
+}
+
+/* Tag styling for dark background */
+.tag {
+    background: #5a382f;
+    color: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    border: 1px solid #7a584f;
+}
+
+.tag:hover {
+    background: #7a584f;
+    color: #ffffff;
+}
+
+/* Donation Section Styles */
+.donation-section {
+    background: #5a382f;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #7a584f;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.donation-section h3 {
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+    font-size: 1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.donate-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f7931a; /* Bitcoin orange */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    margin-bottom: 0.5rem;
+}
+
+.donate-button:hover {
+    background: #e07b0e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.donate-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.donate-note {
+    font-size: 0.75rem;
+    color: #cccccc;
+    margin: 0.5rem 0 0 0;
+    line-height: 1.3;
+}
+
+.qr-code {
+    margin: 0.5rem 0;
+}
+
+.qr-code img {
+    border-radius: 4px;
+    border: 2px solid #7a584f;
+}
+
+</style>
+
+

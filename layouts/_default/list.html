@@ -1,0 +1,92 @@
+{{ partial "header.html" . }}
+
+<!-- Main layout container with sidebar -->
+<div class="main-layout">
+    <!-- Left Sidebar -->
+    <aside class="left-sidebar">
+        {{ partial "sidebar.html" . }}
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+        <div class="home-content">{{ .Content }}</div>
+
+        {{ if .IsHome }}
+            <!-- Search functionality (if enabled) -->
+            {{ if not .Site.Params.noSearch }}
+                {{ partial "search-form.html" . }}
+                <ul id="results"></ul>
+            {{ end }}
+
+            <!-- Display sections and their content -->
+            {{ range .Sections }}
+                <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
+                {{ .CurrentSection.Content }}
+                {{ partial "post_list.html" . }}
+            {{ end }}
+        {{ else }}
+            <!-- For non-home list pages (like tags, categories) -->
+            <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
+            {{ partial "post_list.html" . }}
+        {{ end }}
+    </main>
+</div>
+
+{{ partial "footer.html" . }}
+
+<style>
+/* Reuse the same layout styles from single.html */
+.main-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 120px);
+}
+
+.left-sidebar {
+    background: #A9A9A9;
+    border-right: 1px solid #e0e0e0;
+    padding: 2rem 1.5rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.content-area {
+    padding: 2rem 3rem;
+    max-width: 100%;
+}
+
+/* Additional styles for list page */
+.section-title {
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
+    color: #333;
+}
+
+.home-content {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Ensure the post list looks good in the new layout */
+.post-list {
+    margin-top: 1.5rem;
+}
+
+/* Style adjustments for search */
+#results {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+#results li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-left: 3px solid #007bff;
+    background: #A9A9A9;
+}
+</style>
+
