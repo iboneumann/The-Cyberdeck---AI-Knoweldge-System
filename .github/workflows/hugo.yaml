@@ -18,17 +18,30 @@ jobs:
           submodules: recursive
           fetch-depth: 0
           
+      - name: Debug - List files
+        run: |
+          ls -la
+          ls -la themes/
+          
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.152.1'
           extended: true
           
-      - name: Build
-        run: hugo --minify
+      - name: Debug - Hugo version
+        run: hugo version
+        
+      - name: Debug - Hugo config
+        run: hugo config
+        
+      - name: Build with detailed output
+        run: |
+          hugo --verbose --debug --logLevel info
+        continue-on-error: false
         
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v4
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -45,5 +58,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
 
