@@ -75,9 +75,9 @@ custom projects dedicated to given hardware and need.
 This AI research heavy Cyberdeck needs a strong OS layer and
 dedicated Python Environment. 
 
-Hence, I had the opportunity to change to Ubuntu Server on
-my headnode the M920 I used this to create with DeepSeek a
-set up manual.
+Hence I had the opportunity to change to Ubuntu Server on
+my headnode, the M920, I used this situation to create with 
+DeepSeek a set up manual for the needed Python libraries.
 
 After having installed Python 3.13 and build a Python 
 Environment, this is the next step:
