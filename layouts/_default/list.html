@@ -1,5 +1,3 @@
-{{ partial "header.html" . }}
-
 <!-- Main layout container with sidebar -->
 <div class="main-layout">
     <!-- Left Sidebar -->
@@ -9,42 +7,52 @@
 
     <!-- Main Content Area -->
     <main class="content-area">
-        <div class="home-content">{{ .Content }}</div>
-
+        {{ partial "header.html" . }}
+        
         {{ if .IsHome }}
-            <!-- Search functionality (if enabled) -->
-            {{ if not .Site.Params.noSearch }}
-                {{ partial "search-form.html" . }}
-                <ul id="results"></ul>
+        <!-- Homepage - Show posts directly -->
+        <div class="direct-posts">
+            {{ range where .Site.RegularPages "Type" "posts" | first 10 }}
+            <article class="direct-post">
+                <div class="post-header">
+                    <span class="post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
+                    <h2 class="post-title">{{ .Title }}</h2>
+                </div>
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+            </article>
             {{ end }}
-
-            <!-- Display sections and their content -->
-            {{ range .Sections }}
-                <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
-                {{ .CurrentSection.Content }}
-                {{ partial "post_list.html" . }}
-            {{ end }}
+        </div>
         {{ else }}
-            <!-- For non-home list pages (like tags, categories) -->
-            <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
-            {{ partial "post_list.html" . }}
+        <!-- Other list pages (tags, etc.) - Show simple list -->
+        <div class="page-header">
+            <h1>{{ .Title }}</h1>
+        </div>
+        <div class="simple-post-list">
+            {{ range .Pages.ByWeight }}
+            <div class="post-list-item">
+                <span class="post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
+                <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            </div>
+            {{ end }}
+        </div>
         {{ end }}
     </main>
 </div>
 
-{{ partial "footer.html" . }}
-
 <style>
-/* Reuse the same layout styles from single.html */
+/* Main layout grid */
 .main-layout {
     display: grid;
     grid-template-columns: 280px 1fr;
-    min-height: calc(100vh - 120px);
+    min-height: 100vh;
 }
 
+/* Left Sidebar - Dark brown theme */
 .left-sidebar {
-    background: #A9A9A9;
-    border-right: 1px solid #e0e0e0;
+    background: #1a0f08;
+    border-right: 1px solid #3a2a1a;
     padding: 2rem 1.5rem;
     position: sticky;
     top: 0;
@@ -52,109 +60,138 @@
     overflow-y: auto;
 }
 
+/* Main content area */
 .content-area {
     padding: 2rem 3rem;
     max-width: 100%;
+    font-size: 0.9rem;
 }
 
-/* Additional styles for list page */
-.section-title {
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #000000;
-    color: #333;
+/* Much darker brown color scheme */
+:root {
+    --bg-primary: #0a0602;
+    --bg-secondary: #1a0f08;
+    --bg-tertiary: #2a1a0f;
+    --text-primary: #f0e6dc;
+    --text-secondary: #c9b8a5;
+    --text-muted: #8c7a68;
+    --accent-primary: #b08d57;
+    --accent-hover: #c9a775;
+    --border-color: #3a2a1a;
+    --card-bg: #1a0f08;
 }
 
-.home-content {
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-/* Ensure the post list looks good in the new layout */
-.post-list {
-    margin-top: 1.5rem;
-}
-
-/* Style adjustments for search */
-#results {
-    margin: 1rem 0;
-    padding: 0;
-    list-style: none;
-}
-
-#results li {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-left: 3px solid #007bff;
-    background: #A9A9A9;
-}
-
-<style>
-/* Apply DeepSeek dark theme to main content */
 body {
     background: var(--bg-primary);
     color: var(--text-primary);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.main-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    min-height: calc(100vh - 120px);
+    margin: 0;
+    line-height: 1.6;
 }
 
 .content-area {
-    padding: 2rem 3rem;
-    max-width: 100%;
     background: var(--bg-primary);
     color: var(--text-primary);
 }
 
 /* Header styles */
-#single-header h1 {
-    color: var(--text-primary);
+.site-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
-#single-meta {
-    color: var(--text-secondary);
+.home-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-/* Content styles */
-main {
+.home-button:hover {
+    background: var(--accent-hover);
+}
+
+/* Direct posts styling (for homepage) */
+.direct-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.direct-post {
+    /* No borders, no separation lines */
+}
+
+.post-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-date {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    min-width: 100px;
+    font-family: monospace;
+}
+
+.post-title {
+    color: var(--accent-primary);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.post-content {
     color: var(--text-primary);
     line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+/* Simple list styling (for non-homepage lists) */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    color: var(--accent-primary);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.simple-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.post-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.3rem 0;
 }
 
 /* Links in content */
-.content-area a {
+.content-area a:not(.home-button) {
     color: var(--accent-primary);
     text-decoration: none;
 }
 
-.content-area a:hover {
+.content-area a:not(.home-button):hover {
     color: var(--accent-hover);
     text-decoration: underline;
-}
-
-/* Code blocks */
-pre, code {
-    background: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-color);
-}
-
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary);
-}
-
-/* Navigation */
-.content-nav a {
-    color: var(--accent-primary);
-}
-
-.content-nav a:hover {
-    color: var(--accent-hover);
 }
 </style>
 

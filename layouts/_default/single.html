@@ -1,5 +1,3 @@
-{{ partial "header.html" . }}
-
 <!-- Main layout container with sidebar -->
 <div class="main-layout">
     <!-- Left Sidebar -->
@@ -9,6 +7,8 @@
 
     <!-- Main Content Area -->
     <main class="content-area">
+        {{ partial "header.html" . }}
+        
         {{ if not .Params.notitle }}
         <div id="single-header">
           <h1>{{ .Title | markdownify }}</h1>
@@ -18,8 +18,7 @@
             {{ end }}
             {{ if .Params.date }}
                 <span class="datesub">{{ .Date.Format "Jan 2, 2006" }}{{ if .GitInfo }} &nbsp;&nbsp; m. {{ .Lastmod.Format "Jan 2, 2006" }}{{ end }}</span>
-            {{ end }} 
-            {{ partial "tags.html" .}}
+            {{ end }}
           </div>
         </div>
         {{ else }}
@@ -38,20 +37,18 @@
     </main>
 </div>
 
-{{ partial "footer.html" . }}
-
 <style>
 /* Main layout grid */
 .main-layout {
     display: grid;
     grid-template-columns: 280px 1fr;
-    min-height: calc(100vh - 120px); /* Adjust based on header height */
+    min-height: 100vh;
 }
 
-/* Left Sidebar - fixed to very left edge */
+/* Left Sidebar - Dark brown theme */
 .left-sidebar {
-    background: #f5f5f5;
-    border-right: 1px solid #e0e0e0;
+    background: #1a0f08;
+    border-right: 1px solid #3a2a1a;
     padding: 2rem 1.5rem;
     position: sticky;
     top: 0;
@@ -63,73 +60,111 @@
 .content-area {
     padding: 2rem 3rem;
     max-width: 100%;
+    font-size: 0.9rem;
 }
 
-/* Ensure header stays above everything */
-header {
-    position: relative;
-    z-index: 100;
+/* Much darker brown color scheme */
+:root {
+    --bg-primary: #0a0602;
+    --bg-secondary: #1a0f08;
+    --bg-tertiary: #2a1a0f;
+    --text-primary: #f0e6dc;
+    --text-secondary: #c9b8a5;
+    --text-muted: #8c7a68;
+    --accent-primary: #b08d57;
+    --accent-hover: #c9a775;
+    --border-color: #3a2a1a;
+    --card-bg: #1a0f08;
 }
-<style>
-/* Apply DeepSeek dark theme to main content */
+
 body {
     background: var(--bg-primary);
     color: var(--text-primary);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.main-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    min-height: calc(100vh - 120px);
+    margin: 0;
+    line-height: 1.6;
 }
 
 .content-area {
-    padding: 2rem 3rem;
-    max-width: 100%;
     background: var(--bg-primary);
     color: var(--text-primary);
 }
 
 /* Header styles */
+.site-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.home-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.home-button:hover {
+    background: var(--accent-hover);
+}
+
 #single-header h1 {
-    color: var(--text-primary);
+    color: var(--accent-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 #single-meta {
     color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
 }
 
-/* Content styles */
+#subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.datesub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
 main {
     color: var(--text-primary);
     line-height: 1.6;
+    font-size: 0.9rem;
 }
 
-/* Links in content */
-.content-area a {
+.content-area a:not(.home-button) {
     color: var(--accent-primary);
     text-decoration: none;
 }
 
-.content-area a:hover {
+.content-area a:not(.home-button):hover {
     color: var(--accent-hover);
     text-decoration: underline;
 }
 
-/* Code blocks */
 pre, code {
-    background: var(--bg-secondary) !important;
+    background: var(--bg-tertiary) !important;
     color: var(--text-primary) !important;
     border: 1px solid var(--border-color);
+    border-radius: 4px;
 }
 
-/* Headers */
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
 }
 
-/* Navigation */
 .content-nav a {
     color: var(--accent-primary);
 }
@@ -138,5 +173,4 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-hover);
 }
 </style>
-
 

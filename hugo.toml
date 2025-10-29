@@ -1,5 +1,5 @@
-baseURL = "https://iboneumann.github.io/The-Cyberdeck---AI-Knoweldge-System/"
-#baseURL = "http://localhost:1313"
+#baseURL = "https://iboneumann.github.io/The-Cyberdeck---AI-Knoweldge-System/"
+baseURL = "http://localhost:1313"
 canonifyURLs = true
 languageCode = "en-us"
 title = "The Cyberdeck - AI Knowledge System"
@@ -19,7 +19,3 @@ theme = "hugo-dead-simple"
   url = "/"
   weight = 1
 
-[[menu.main]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 2
