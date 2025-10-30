@@ -37,7 +37,7 @@ eventually, by no more than stating where you
 have this from.
 
 All of Freedom is a two way road, not only the Freedom
-of Speach.
+of Speech.
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
