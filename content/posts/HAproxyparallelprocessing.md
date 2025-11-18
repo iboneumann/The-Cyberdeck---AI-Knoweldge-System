@@ -2,7 +2,7 @@
 date = '2025-11-18T13:01:56+01:00'
 draft = false
 title = "HAproxy for parallelisation"
-weight = 29
+weight = 30
 +++
 
 I have slow hardware in need of every efficiency trick in the book. While the
