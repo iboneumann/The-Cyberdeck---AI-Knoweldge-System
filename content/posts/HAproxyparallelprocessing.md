@@ -18,7 +18,7 @@ installed on the Ubuntu Serer head node and the difference in processing
 This is the DeepSeek explination in scientific English on University enabled
 level. No Hacker Dude slang...
 
-```
+```batch
 # Building a Distributed AI Pipeline: From Single-Node Bottlenecks 
 to 
 HAProxy Load Balancing
@@ -141,5 +141,5 @@ marks a significant milestone in that journey.
 *[This chapter documents the transition from custom Python load balancing to 
 HAProxy in my Cyberdeck AI Knowledge System build. Follow along as we continue 
 building the future of personal knowledge management.]*
-```batch
+```
 
