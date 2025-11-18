@@ -18,6 +18,11 @@ installed on the Ubuntu Serer head node and the difference in processing
 This is the DeepSeek explination in scientific English on University enabled
 level. No Hacker Dude slang...
 
+DeepSeek.
+I am having a blog and thesis website about building a Cyberdeck AI Knowledge 
+System. Please summarize what we just did for me as chapter in for the website 
+and blogg with your words that i can copy and paste.
+
 ```batch
 # Building a Distributed AI Pipeline: From Single-Node Bottlenecks 
 to 
