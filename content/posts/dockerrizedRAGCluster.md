@@ -142,14 +142,14 @@ scales intelligently based on available resources.
 **Primary Host:** node4 (192.168.178.33)
 
 ### **Infrastructure Overview:**
-```
+
 Nodes:
 ├── node1 (192.168.178.30): RPi5 - Fast inference
 ├── node5 (192.168.178.26): X260 - Balanced processing
 ├── node4 (192.168.178.33): 920 - RAG core (current host)
 ├── node6 (192.168.178.29): Fujitsu i7 64GB - Heavy reasoning
 └── node2 (192.168.178.36): i5 16GB - Code generation
-```
+
 
 ### **Services Architecture:**
 1. **Query Router** (`~/rag-cluster/query-router/`)
@@ -185,7 +185,7 @@ Nodes:
 - **deepseek-r1:32b** (20GB) High-performance reasoning
 
 ### **Access Points:**
-```
+
 Internal:
   Query Router API: http://localhost:8088/api/chat
   Dashboard:        http://localhost:3888
@@ -195,10 +195,10 @@ Internal:
 External:
   Main API:         http://192.168.178.33/api/chat
   Dashboard:        http://192.168.178.33:3888
-```
+
 
 ### **Key Commands:**
-```bash
+
 # Cluster management
 cd ~/rag-cluster
 docker-compose up -d                   # Start all services
@@ -212,7 +212,7 @@ ollama pull <model>                    # Pull new model
 # Testing
 curl http://localhost:8088/health      # Health check
 curl http://localhost:8088/api/nodes   # Node status
-```
+
 
 ### **Routing Logic Summary:**
 1. **Query Analysis**: Classifies queries as coding/reasoning/simple/general
@@ -262,5 +262,6 @@ specialized models, and prepare for Cortex layer evolution.
 will build upon this foundation with distributed training, specialized workers, and 
 advanced orchestration capabilities.
 ```
-
+The next step is testing thereby creating the finalized scripts parallel to 
+background RAGing.
   
