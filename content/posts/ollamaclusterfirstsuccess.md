@@ -15,4 +15,4 @@ to RAGing.
 Eventually, this set up will handle complex routing between dedicated
 Expert AIs.
 
-(/images/parallelRAGprocessing.png)
+(parallelRAGprocessing.png)
