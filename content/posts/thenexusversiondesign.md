@@ -40,8 +40,11 @@ in one view and thereby also allows scripts to use simplified
 paths.
 
 At this point the Cybderdeck has two main AI systems:
-The Obsidian Deck 
-The RAGed Wiki OpenLibrary Website AI
+
+1.The Obsidian Deck (TOD)
+
+2.The RAGed Wiki OpenLibrary Website AI (RAGedWOLWAI)
+
 The TOD is all my DeepSeek conversations and therefore will
 reflect my personal reasoning with the largest AI model. It 
 contains all chats and thereby all Python Scripts, 
