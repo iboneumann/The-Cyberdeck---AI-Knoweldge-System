@@ -5,9 +5,9 @@ title = "Where we are heading"
 weight = 28
 +++
 
-My Cyberdeck has a specific function within the AI systems based on the
-latest innovative Ollama LLM models that are also base for DeepSeek and
-Chat GPT.
+My Cyberdeck has a specific function within the AI systems based on the  
+latest innovative Ollama LLM models that are also base for DeepSeek and  
+Chat GPT.  
 
 The Cyberdeck requires also coding skills, but way more system architecture  
 and system design capability. The coding can be given to an online model and  
