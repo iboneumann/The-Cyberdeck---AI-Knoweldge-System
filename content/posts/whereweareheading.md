@@ -138,7 +138,12 @@ vector embeddings and the semantic search space.
         other chunks in the play about the prologue or stars. Now, after 
         adding the critique, that same chunk will also be very close to the 
         footnote that analyzes the theme of fate in that specific passage.
-        This dramatically changes retrieval. When you ask a question like "How does Shakespeare use the concept of fate in Romeo and Juliet?", the retrieval system will now find and return not only the relevant lines from the play but also the critic's direct commentary on those lines. The context sent to the AI is now a blend of the primary source and the secondary analysis.
+        This dramatically changes retrieval. When you ask a question like     
+        "How does Shakespeare use the concept of fate in Romeo and Juliet?",
+        the retrieval system will now find and return not only the relevant
+        lines from the play but also the critic's direct commentary on those
+        lines. The context sent to the AI is now a blend of the primary
+        source and the secondary analysis.
 
 So, to answer directly: Yes, the "table of words" (the vector index) is 
 fundamentally altered and enriched when you RAG new documents like a critic's 
