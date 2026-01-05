@@ -55,7 +55,7 @@ web site content.
 
 This is what the Obsidian-Deck AI says going through the notes about the Cyberdeck:  
 
-```
+```batch
 You: What is a Cyberdeck based on this clusters information?
                                                                                                                                                               Assistant: Based on the cluster context, a Cyberdeck refers to a local AI system inspired by Shadowrun's Cyberdeck concept for managing  
 a Beowulf cluster of four computers. The goal is to design a system that can handle errors and chat limits, and provide Python scripts as   
@@ -88,5 +88,4 @@ to create templates for chats, track knowledge management, and possibly even gen
 Please let me know if you have any further questions!
 
 You: 
-```batch
- 
+``` 
