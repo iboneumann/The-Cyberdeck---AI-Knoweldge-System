@@ -5,25 +5,25 @@ title = 'DeepSeek Use on Storage'
 weight = 20
 +++
 
-Large AI model design use
-
-The Cybereck project is bigger than the DIY builds based on a Raspi and
-even those might have started with a large model AI chat.
-
-The large models online add perfectly to designing a dedicated small
-AI model using project, like The Cyberdeck AI Knowledge System.
-
-Storage is important and using a LAN set up to create an integrated
-system creates some challenges. First I created with DeepSeek a 
-script that runs over the Cyberdeck and lists all storage device.y
-
-These chapters show how I work with DeepSeek to make educated decisions
-on the concrete Cyberdeck design. I leave the thought process even
-so reading them helps to stop DeepSeek from heading the wrong way usually
-by having given missing information.
-
-The opening text was prepared in Text Editor.
-
+Large AI model design use  
+  
+The Cybereck project is bigger than the DIY builds based on a Raspi and  
+even those might have started with a large model AI chat.  
+  
+The large models online add perfectly to designing a dedicated small  
+AI model using project, like The Cyberdeck AI Knowledge System.  
+  
+Storage is important and using a LAN set up to create an integrated  
+system creates some challenges. First I created with DeepSeek a   
+script that runs over the Cyberdeck and lists all storage devices.  
+  
+These chapters show how I work with DeepSeek to make educated decisions  
+on the concrete Cyberdeck design. I leave the thought process even  
+so reading them helps to stop DeepSeek from heading the wrong way usually  
+by having given missing information.  
+  
+The opening text was prepared in Text Editor.  
+  
 ```batch
 I am working on an Cyberdeck which is an AI Knowledge Management system.
 It is based on a LAN set up of low cost hardware having a Beowulf Cluster
@@ -239,31 +239,31 @@ class KnowledgeManager:
         return answer
 ```
 
-### 8. **Practical Implementation Steps**
-
-**Phase 1: Foundation**
-1. Set up central metadata database (SQLite/PostgreSQL)
-2. Create Python library for file operations
-3. Basic MC integration for tag viewing
-
-**Phase 2: AI Integration**
-1. Implement Ollama file analysis
-2. Create automatic tagging system
-3. Build search interface
-
-**Phase 3: Distribution**
-1. MPICH-powered batch processing
-2. Storage tiering automation
-3. Unified access API
-
-**Phase 4: Polish**
-1. Advanced MC integration
-2. RAG system completion
-3. Performance optimization
-
-### 9. **Housekeeping Automation**
-
-Your Friday file sorting ritual can become automated:
+### 8. **Practical Implementation Steps**  
+  
+**Phase 1: Foundation**  
+1. Set up central metadata database (SQLite/PostgreSQL)  
+2. Create Python library for file operations  
+3. Basic MC integration for tag viewing  
+  
+**Phase 2: AI Integration**  
+1. Implement Ollama file analysis  
+2. Create automatic tagging system  
+3. Build search interface  
+  
+**Phase 3: Distribution**  
+1. MPICH-powered batch processing  
+2. Storage tiering automation  
+3. Unified access API  
+  
+**Phase 4: Polish**  
+1. Advanced MC integration  
+2. RAG system completion  
+3. Performance optimization  
+  
+### 9. **Housekeeping Automation**  
+  
+Your Friday file sorting ritual can become automated:  
 
 ```python
 # Weekly housekeeping script

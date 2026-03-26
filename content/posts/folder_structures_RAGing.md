@@ -5,39 +5,39 @@ title = 'Folder structures'
 weight = 19
 +++
 
-Folder structure considerations
-
-RAGing does only need a data dump, because the RAGing creates its
-own structure readable for the AI.
-
-Folder structures are important for human readability especially,
-because the RAGing is based on texts. For those mankind developed
-specific forms and structures over the millenniums for a reason.
-
-The Cyberdeck has in particular needs for a clear structure. It's
-use case combines AI and human behavior. We want to read a text
-while reasoning with the AI about it.
-
-This Thesis is not a Law School Thesis, but Harvard seems to have
-fixed major parts of that by having announced to bring millions of
-titles from its large libraries to AI training by publishing them.
-
-This is about building with open source LLM models a computer
-system using both hardware and software most efficient.
-That's why I called it Cyberdeck, being the most powerful tools
-in Dark Sci-Fi future in which the man-machine link turned
-reality.
-
-DeepSeek suggested a folder structure that does make sense, but
-not for my personal case in which the sources are more important
-than the librarian classic structure due to the processing
-pipeline.
-
-The MySQL database combining Obsidian tags with the data dumps
-and most likely some AI scripts to create a human readable 
-Cyberdeck Library Index is coming thereafter.
-
-The Folder Structures
+Folder structure considerations  
+  
+RAGing does only need a data dump, because the RAGing creates its  
+own structure readable for the AI.  
+  
+Folder structures are important for human readability especially,  
+because the RAGing is based on texts. For those mankind developed  
+specific forms and structures over the millenniums for a reason.  
+  
+The Cyberdeck has in particular needs for a clear structure. It's  
+use case combines AI and human behavior. We want to read a text  
+while reasoning with the AI about it.  
+  
+This Thesis is not a Law School Thesis, but Harvard seems to have  
+fixed major parts of that by having announced to bring millions of  
+titles from its large libraries to AI training by publishing them.  
+  
+This is about building with open source LLM models a computer   
+system using both hardware and software most efficient.  
+That's why I called it Cyberdeck, being the most powerful tools  
+in Dark Sci-Fi future in which the man-machine link turned  
+reality.  
+  
+DeepSeek suggested a folder structure that does make sense, but  
+not for my personal case in which the sources are more important  
+than the librarian classic structure due to the processing  
+pipeline.  
+  
+The MySQL database combining Obsidian tags with the data dumps  
+and most likely some AI scripts to create a human readable  
+Cyberdeck Library Index is coming thereafter.  
+  
+The Folder Structures  
 ```black
 RAG_Knowledge_Base/
 ├── main_script.py                 # Main RAG script
@@ -115,5 +115,5 @@ RAG_Pipeline/
 └── rag_system.py                 # MAIN QUERY INTERFACE
 ```
 Needless to say, that good planning and regular housekeeping of is  
-crucial creating Knowledge Systems that lead to success which is
-understanding and learning to progress and evolve.
+crucial creating Knowledge Systems that lead to success which is  
+understanding and learning to progress and evolve.  

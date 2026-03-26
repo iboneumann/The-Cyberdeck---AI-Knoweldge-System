@@ -7,11 +7,11 @@ weight = 15
 
 ### The Updated googlesearch.py script
 
-The manual
-
-googlesearch.py
-python3 googlesearch.py "alphabetical linux terminal command list" \
-    --search-results 500 \
+The manual  
+  
+googlesearch.py  
+python3 googlesearch.py "alphabetical linux terminal command list" \  
+    --search-results 500 \  
     --analyze-domains 15 \
     --model llama3 \
     --max-content 40000 \

@@ -5,29 +5,29 @@ title = "DeepSeek use - Node Design"
 weight = 22
 +++
 
-The L420 future
-
-The L420 is very interesting looking forward to 
-a bright future in the Cyberdeck, because of its 
-broken screen requiring a headless OS as the only
-useful solution.
-
-That's how the M920 started using the DisplayPort
-adapter creating a two screen set up.
-
-The L420 has two interesting slots. An eSATA and an
-ExpressCard Slot.
-
-We also have to understand RAGing better. It does
-not turn the data points into a part of the AI core
-model, but extends data points by creating a Vector
-Database.
-
-RAGing needs a Script to tell the Ollama server which
-model to run with which RAGed vectors.
-
-
-That's the outcome:
+The L420 future  
+  
+The L420 is very interesting looking forward to   
+a bright future in the Cyberdeck, because of its   
+broken screen requiring a headless OS as the only  
+useful solution.  
+  
+That's how the M920 started using the DisplayPort  
+adapter creating a two screen set up.  
+  
+The L420 has two interesting slots. An eSATA and an  
+ExpressCard Slot.  
+  
+We also have to understand RAGing better. It does  
+not turn the data points into a part of the AI core  
+model, but extends data points by creating a Vector  
+Database.  
+  
+RAGing needs a Script to tell the Ollama server which  
+model to run with which RAGed vectors.  
+  
+  
+That's the outcome:  
 ```batch
 Excellent! With the ExpressCard slot, you have a viable path 
 to add a GPU. And yes, your thinking about using this as a 

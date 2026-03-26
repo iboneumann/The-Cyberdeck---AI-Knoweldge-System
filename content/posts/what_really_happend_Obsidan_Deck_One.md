@@ -6,52 +6,52 @@ weight = 4
 +++
 
 ### What really happend - Obsidan Deck
-The RAGed AI gave a good plan based on what it was taught on.
-RAGing means teaching an AI model with knowledge. This is
-different from searching with an AI model through a database
-of notes containing a solution. RAGed the AI reasons and does
-not just look up by searching for Keywords.
-
-In the end of the Day does the Obsidian Deck have no
-SQL database at this moment, neither has the Cyberdeck which
-would control, manage and execute file operations over the
-LAN Computers.
-
-This is about a living project using old refurbished Office
-Lenovo i7 and i5 hardware combined with RaspberryPi SBCs.
-
-The Obsidian Deck is functional.
-
-This is the pipeline that turns DeepSeek Chats into an
-Obsidian Vault:
-
-1st: AIparser10.py
-
-2nd: filename_generator.py
-
-3rd: convert_to_obsidian.py
-
-Final AI Shell: Obsidian-Deck.py
-
-Each is a Python script executed in a Python 3.13 environment.
-The AI parser is Version 10 and uses a locally installed Llama
-model on a currently just 16GB RAM i7 M920 tiny (max 32GB) to
-create a useful tag based structure for at this moment about
-600 DeepSeek chats.
-
-Using a Firefox extension to download .html files of the
-DeepSeek chat they need better naming than a time stamp which
-is done by the filename_generator.py. Finally the pipelines
-last script converts the md files into Obsidian md files and
-saves them into the Obsidian Vault.
-
-The Obsidian-Deck.py is at this point not RAGed, but uses a set
-of commands to structure the large Vault for better understanding
-of the content being able to summaries the based on tags defined
-Obsidian nodes Cluster.
-
-Sometimes reading the manual helps to understand what
-something does:
+The RAGed AI gave a good plan based on what it was taught on.  
+RAGing means teaching an AI model with knowledge. This is  
+different from searching with an AI model through a database  
+of notes containing a solution. RAGed the AI reasons and does  
+not just look up by searching for Keywords.  
+  
+In the end of the Day does the Obsidian Deck have no  
+SQL database at this moment, neither has the Cyberdeck which  
+would control, manage and execute file operations over the  
+LAN Computers.  
+  
+This is about a living project using old refurbished Office  
+Lenovo i7 and i5 hardware combined with RaspberryPi SBCs.  
+  
+The Obsidian Deck is functional.  
+  
+This is the pipeline that turns DeepSeek Chats into an  
+Obsidian Vault:  
+  
+1st: AIparser10.py  
+  
+2nd: filename_generator.py  
+  
+3rd: convert_to_obsidian.py  
+  
+Final AI Shell: Obsidian-Deck.py  
+  
+Each is a Python script executed in a Python 3.13 environment.  
+The AI parser is Version 10 and uses a locally installed Llama  
+model on a currently just 16GB RAM i7 M920 tiny (max 32GB) to  
+create a useful tag based structure for at this moment about  
+600 DeepSeek chats.  
+  
+Using a Firefox extension to download .html files of the  
+DeepSeek chat they need better naming than a time stamp which  
+is done by the filename_generator.py. Finally the pipelines  
+last script converts the md files into Obsidian md files and  
+saves them into the Obsidian Vault.  
+  
+The Obsidian-Deck.py is at this point not RAGed, but uses a set  
+of commands to structure the large Vault for better understanding  
+of the content being able to summaries the based on tags defined  
+Obsidian nodes Cluster.  
+  
+Sometimes reading the manual helps to understand what  
+something does:  
 
 ```bash
 ## The Obsidian Deck Manual

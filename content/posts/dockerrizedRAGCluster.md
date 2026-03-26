@@ -5,24 +5,24 @@ title = 'Dockerrized RAG Cluster'
 weight = 31
 +++
 
-This next step from using a single node of a Beowulf Cluster for an AI driven
-Knowledge Management System being the Cyberdeck Nexus version meant to build
-upon the existing Beowulf LAN based Computer system another layer for Ollama
-models running parallel processes creating an Ollama Cluster.
-
-This is a very complex setup that required a larger existing set of Open Source
-Software options like a database and load balancing application.
-
-This meant rewriting all Cyberdeck Scripts, changing to a more use case appropriate
-Linux OS and creating a Cluster layer for those new written scripts.
-
-I also added one more Node with a large RAM core using Ubuntu Server LTS in a 
-headless set up.
-
-The system is based on Chromadb, HAProxy and Docker all installed on the headnode,
-the Lenovo M920q with Ubuntu Server LTS and Minimal-Desktop.
-
-Entering the three keywords into the Google AI Mode returns a clear statement:
+This next step from using a single node of a Beowulf Cluster for an AI driven  
+Knowledge Management System being the Cyberdeck Nexus version meant to build  
+upon the existing Beowulf LAN based Computer system another layer for Ollama  
+models running parallel processes creating an Ollama Cluster.  
+  
+This is a very complex setup that required a larger existing set of Open Source  
+Software options like a database and load balancing application.  
+  
+This meant rewriting all Cyberdeck Scripts, changing to a more use case appropriate  
+Linux OS and creating a Cluster layer for those new written scripts.  
+  
+I also added one more Node with a large RAM core using Ubuntu Server LTS in a   
+headless set up.  
+  
+The system is based on Chromadb, HAProxy and Docker all installed on the headnode,  
+the Lenovo M920q with Ubuntu Server LTS and Minimal-Desktop.  
+  
+Entering the three keywords into the Google AI Mode returns a clear statement:  
 
 ```batch
 ChromaDB, HAProxy, and Docker allows you to build a highly available, load-balanced 
@@ -49,39 +49,39 @@ services.
 
 ```
 
-From within the Python environment the Cyberdeck AI scripts now have an infrastructure
-that independently from those uses, at this moment in time, 5 nodes for its AI tasks.
-That means that, as soon as the Cyberdeck set of scripts is finalized, the system can
-perform batch processes like RAGing DRM free books while at the same time take
-interactive knowledge management requests fro the user.
-
-The use cases are all based on reasoning about information. Depending on the installed
-Ollama LLM models that reasoning can be used to write code or texts.
-
-The setup became much more sophisticated and the Beowulf layer become exponentially
-more important increasing processing speed by far. The Cyberdeck Nexus version can run
-on a set of strong GPU upgraded desktop or best servers without a Beowulf layer, but
-then being much less efficient in CPU use.
-
-In a coding lab the Cyberdeck Nexus Version creates an Ethical Hacker Coding Laboratory
-enabling to use the Obsidian Deck for keeping control and oversight of System 
-Architecture, Project and Status notes, having by the RAGed AI an expert system
-to help by reasoning understand both coding itself and the even more the actual to be 
-solved problem or task.
-
-Based on the given Apache 2.0 Licence, that hopefully is understood as the freedom
-to pay more than less, the final version could be altered to build a coding factory
-team that uses the Cyberdeck as a Workstation for each developer and as a Workstation
-for the Lead Manager to keep track of the progress having added a manual or even
-automated system of creating summery files being saved in the Cybderdeck Nexus folders.
-
-Using the Cluster function of the Obsidian Deck each user can create a sophisticated
-progress status update for himself, the team and managers.
-
-The Apache 2.0 Licence gives full freedom to alter, enhance and customize the code.
-
-This is how DeepSeek tells about the latest development step:
-
+From within the Python environment the Cyberdeck AI scripts now have an infrastructure  
+that independently from those uses, at this moment in time, 5 nodes for its AI tasks.  
+That means that, as soon as the Cyberdeck set of scripts is finalized, the system can  
+perform batch processes like RAGing DRM free books while at the same time take  
+interactive knowledge management requests fro the user.  
+  
+The use cases are all based on reasoning about information. Depending on the installed  
+Ollama LLM models that reasoning can be used to write code or texts.  
+  
+The setup became much more sophisticated and the Beowulf layer become exponentially  
+more important increasing processing speed by far. The Cyberdeck Nexus version can run  
+on a set of strong GPU upgraded desktop or best servers without a Beowulf layer, but  
+then being much less efficient in CPU use.  
+  
+In a coding lab the Cyberdeck Nexus Version creates an Ethical Hacker Coding Laboratory  
+enabling to use the Obsidian Deck for keeping control and oversight of System   
+Architecture, Project and Status notes, having by the RAGed AI an expert system  
+to help by reasoning understand both coding itself and the even more the actual to be   
+solved problem or task.  
+  
+Based on the given Apache 2.0 Licence, that hopefully is understood as the freedom  
+to pay more than less, the final version could be altered to build a coding factory  
+team that uses the Cyberdeck as a Workstation for each developer and as a Workstation  
+for the Lead Manager to keep track of the progress having added a manual or even  
+automated system of creating summery files being saved in the Cybderdeck Nexus folders.  
+  
+Using the Cluster function of the Obsidian Deck each user can create a sophisticated  
+progress status update for himself, the team and managers.  
+  
+The Apache 2.0 Licence gives full freedom to alter, enhance and customize the code.  
+  
+This is how DeepSeek tells about the latest development step:  
+  
 ```batch
 # 🎉 **Project Summary: Nexus RAG Cluster with Intelligent Model Routing**
 
@@ -262,6 +262,6 @@ specialized models, and prepare for Cortex layer evolution.
 will build upon this foundation with distributed training, specialized workers, and 
 advanced orchestration capabilities.
 ```
-The next step is testing thereby creating the finalized scripts parallel to 
-background RAGing.
+The next step is testing thereby creating the finalized scripts parallel to   
+background RAGing.  
   

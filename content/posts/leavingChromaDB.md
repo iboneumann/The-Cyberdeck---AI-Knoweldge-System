@@ -5,32 +5,39 @@ title = 'Leaving ChromaDB'
 weight = 32
 +++
 
-The project leaves ChromaDB for a tailored selfmade system based on the first version. Also the Nexus version
-will use a tiny down to the very core of database systems tailored one.
+The project leaves ChromaDB for a tailored selfmade system based on the   
+first version. Also the Nexus version will use a tiny down to the very   
+core of database systems tailored one.  
+  
+In the case of this project I faced API format issues.   
 
-In the case of this project I faced API format issues. 
-
-"The core issue appears to be how ChromaDB's embedding function communicates with the Ollama API endpoint, which 
-aligns with the errors you've been troubleshooting." DeepSeek explained me the set up problems,"Documented 
-Incompatibility: Users have reported failures when using ChromaDB's built-in OllamaEmbeddingFunction, with errors 
-appearing during the document embedding or collection creation stages.
-    ollama embedding model does not work with Chroma DB #5422
+"The core issue appears to be how ChromaDB's embedding function  
+communicates with the Ollama API endpoint, which aligns with the  
+errors you've been troubleshooting." DeepSeek explained me the set up  
+problems,"Documented Incompatibility: Users have reported failures when  
+using ChromaDB's built-in OllamaEmbeddingFunction, with errors appearing   
+during the document embedding or collection creation stages.  
+    ollama embedding model does not work with Chroma DB #5422  
     https://github.com/langflow-ai/langflow/issues/5422
     ollama embedding model does not work with Chroma DB #5422
     https://github.com/ollama/ollama/issues/5951
-Performance Considerations: Benchmark tests also indicate that while ChromaDB is fast for single queries, it can 
-struggle significantly with high concurrency—a situation your 20-worker RAG processor could easily create
+Performance Considerations: Benchmark tests also indicate that while ChromaDB  
+is fast for single queries, it can struggle significantly with high  
+concurrency—a situation your 20-worker RAG processor could easily create  
     Speed and Scalability in Vector Search (Sameer Kankute Sep 14, 2024)
     https://www.newtuple.com/post/speed-and-scalability-in-vector-search"
     
 The now tailored system is working as I type.  
 
-For reference here the full System Architecture evaluation using DeepSeeks reasoning and data point capabilities:
+For reference here the full System Architecture evaluation using DeepSeeks   
+reasoning and data point capabilities:  
 ```batch
 (base) ibo@920:~/LTS_Cyberdeck_Scripts$ 
-    HAProxy (Port 8080) - Load balancer distributing embedding requests across Ollama cluster nodes
+    HAProxy (Port 8080) - Load balancer distributing embedding requests 
+                          across Ollama cluster nodes
 
-    ChromaDB Cluster (Ports 8000-8004) - Vector database with specialized collections:
+    ChromaDB Cluster (Ports 8000-8004) - Vector database with specialized 
+                                         collections:
         Port 8000: Unmanaged instance (likely from previous testing)
         Port 8001: "Encyclopedic" (Wiki + Books) - main RAG collection
         Port 8002: "Obsidian" (Your markdown chats)
@@ -63,8 +70,8 @@ PROPOSED ARCHITECTURE:
 3. Direct Ollama connection for single-node fallback
 
 
-Why multiple ChromaDB servers (8000-8004)? Are these actually different physical machines, or just separate 
-instances on one machine?
+Why multiple ChromaDB servers (8000-8004)? Are these actually different physical 
+machines, or just separate instances on one machine?
 The system is accessing several vector databases seperated from each other.
     What does your Ollama cluster look like? How many nodes, and what's the HAProxy configuration?
       It is 6 nodes
@@ -94,11 +101,12 @@ fujitsu64gb       all-minilm:latest
         A search engine over Wikipedia?
         A personal knowledge base?
         A hybrid RAG system?
-        Actually all of that. The idea is inspired by a Shadowrun Cyberdeck. Using low cost hardware optimized 
-        by a Beowulf Cluster layer using
-        MPICH for CPU load distribution that happens to also work when standard software uses system resources 
-        that are parallelized the system
-        will be a learning platform, the Cyberdeck AI Knowledge System. It is using these parts:
+        Actually all of that. The idea is inspired by a Shadowrun Cyberdeck. 
+        Using low cost hardware optimized by a Beowulf Cluster layer using
+        MPICH for CPU load distribution that happens to also work when 
+        standard software uses system resources that are parallelized the 
+        system will be a learning platform, the Cyberdeck AI Knowledge System. 
+        It is using these parts:
         [Knowledge System]
     ├── a)DeepSeek Chat Processor (batch) Obsidian-Deck (several scripts)
     ├── b)RAG-AI 1 (specific content) Obsidian 
@@ -106,38 +114,45 @@ fujitsu64gb       all-minilm:latest
     ├── d)RAG-AI 3 Chats RAGed abcd
     ├── e)Multi-source Database  Content listings to open files
     └── f)[Future: Coding AI, Essay AI, Simulation AI]
-        As soon functional, this will be a most sophisticated system to use ollama LLM models for reasoning, 
-        in my personal case for philosophy, coding and dark sci.fi stories, while having wider uses cases in 
-        mainly research. The user can talk wiht the RAGed content and about Obsidian organised content.
+        As soon functional, this will be a most sophisticated system to use ollama 
+        LLM models for reasoning, in my personal case for philosophy, coding and 
+        dark sci.fi stories, while having wider uses cases in mainly research. The 
+        user can talk wiht the RAGed content and about Obsidian organised content.
         
- The initial design idea was that the scripts a to f run in terminal sessions of Terminator. The use is parallel. 
-Each request is given to HAproxy handling the distribution to the nodes. RAGing of large data sets is a constant 
-repetetive task with the several vectors growing over time and supposed to be a background process, while I use 
-the other options such as using a to structure for obsidian my notes using an AI to talk about those like c that 
-is by RAGing turned into an expert system. The base is Wiki and some wiki articals find deeper information by 
-OpenLibrary books. D is saving those conversations to add another layer of allready evaluated thoughts. This way 
-constantly growing Second Brain is created.
+ The initial design idea was that the scripts a to f run in terminal sessions of 
+Terminator. The use is parallel. 
+Each request is given to HAproxy handling the distribution to the nodes. RAGing of 
+large data sets is a constant repetetive task with the several vectors growing over 
+time and supposed to be a background process, while I use the other options such as 
+using a to structure for obsidian my notes using an AI to talk about those like c that 
+is by RAGing turned into an expert system. The base is Wiki and some wiki articals 
+find deeper information by OpenLibrary books. D is saving those conversations to add 
+another layer of allready evaluated thoughts. This way constantly growing Second Brain 
+is created.
 
-The design fails at an early stage and I wonder what exactly the bottle neck is. In a previous version did I not 
-use an existing db system, but let DeepSeek create a script that creates a .json file as a vector database core 
-and connected to that reducing the database logic to a class in a python script. I hoped the chromadb was more 
+The design fails at an early stage and I wonder what exactly the bottle neck is. 
+In a previous version did I not use an existing db system, but let DeepSeek create a 
+script that creates a .json file as a vector database core and connected to that reducing 
+the database logic to a class in a python script. I hoped the chromadb was more 
 scalable and the better fit with a laod balancing system.
 
-Lets get over the core design and give me your input from this comprehensive explination, please.
+Lets get over the core design and give me your input from this comprehensive 
+explination, please.
 
 
-This simple design is your Minimum Viable Cyberdeck Database (MVCDB). You can scale it intelligently:
-    Phase 1 (Now): Implement the basic add and linear-scan query. This will work immediately for your 42k chunks 
-    and prove the concept.
-    Phase 2 (1-2 weeks): Implement partitioning. Split data by embedding "bucket" (e.g., first dimension value) 
-    into subdirectories. Query only    
+This simple design is your Minimum Viable Cyberdeck Database (MVCDB). You can scale 
+it intelligently:
+    Phase 1 (Now): Implement the basic add and linear-scan query. This will work 
+    immediately for your 42k chunks and prove the concept.
+    Phase 2 (1-2 weeks): Implement partitioning. Split data by embedding "bucket" 
+    (e.g., first dimension value) into subdirectories. Query only    
     relevant partitions.
-    Phase 3 (Future): For million-scale chunks, add HNSW or FAISS indexing for one partition, keeping the simple 
-    file storage.
-This approach transforms your biggest liability into your greatest asset: a database you fully understand, control, 
-and can optimize precisely for your Beowulf cluster's patterns.
-Would you like me to draft the full integration code for your 7_Wikidump_RAGing_Cyberdeck.py script using this new 
-CyberdeckVectorStore class?
+    Phase 3 (Future): For million-scale chunks, add HNSW or FAISS indexing for one partition, 
+    keeping the simple file storage.
+This approach transforms your biggest liability into your greatest asset: a database you fully 
+understand, control, and can optimize precisely for your Beowulf cluster's patterns.
+Would you like me to draft the full integration code for your 7_Wikidump_RAGing_Cyberdeck.py 
+script using this new CyberdeckVectorStore class?
 
 
 For your local, persisted databases (likely what you have on ports 8001-8004):
@@ -150,20 +165,23 @@ cdp export "http://localhost:8000/wiki_optimized" > wiki_data.jsonl
 
 =+
 Complexity: Requires writing a systemd service unit file for each collection.
-  Lets write a blueprint. We should structure the service in two classes. The standard function and the bespoke 
-  function.
+  Lets write a blueprint. We should structure the service in two classes. The standard function 
+  and the bespoke  function.
 Consideration: Adds configuration overhead; query routing logic becomes crucial.
-  We have one cross all node service for RAGing. All others are dedicated to a model and its vector database. 
-  The Obsidian-Deck is already existing and has a chromadb with a dedicate path. The others do not exist yet for 
-  the Ubuntu Server LTS head node being the 920. We have to then think about how to split up over the nodes a 
-  to f, which is a great opportunity anyway and turns the routing into an advantage. One question can at this 
-  point not be split up and must face one json file and one ollama llm. Later we can add another script for 
-  another port and use a model to split up questions for several by than expert systems and combine those into a 
-  unified answer based on the existing system. Actually that is part of the next version post this nexus version 
-  than called cortex.
-Service Placement. For now lets shoot from the 920 being the "terminal head" or access point. The large fujitsu is 
-headless and supposed to become the Cortex later. Instead I wonder which function like in a third class the services 
-could have that use parallel enabled python libraries or OS parts?
+  We have one cross all node service for RAGing. All others are dedicated to a model and its 
+  vector database. 
+  The Obsidian-Deck is already existing and has a chromadb with a dedicate path. The others 
+  do not exist yet for the Ubuntu Server LTS head node being the 920. We have to then think 
+  about how to split up over the nodes a to f, which is a great opportunity anyway and turns 
+  the routing into an advantage. One question can at this point not be split up and must face 
+  one json file and one ollama llm. Later we can add another script for another port and use a 
+  model to split up questions for several by than expert systems and combine those into a 
+  unified answer based on the existing system. Actually that is part of the next version post 
+  this nexus version than called cortex.
+Service Placement. For now lets shoot from the 920 being the "terminal head" or access point. 
+The large fujitsu is headless and supposed to become the Cortex later. Instead I wonder which 
+function like in a third class the services could have that use parallel enabled python 
+libraries or OS parts?
 
 [Your AI Scripts a-f]
          │
@@ -431,7 +449,8 @@ python3 -m json.tool
     "model": "all-minilm:latest",
     "data_file": "/home/ibo/Pooled-Storage/CyberdeckDB/wiki_data.jsonl"
 }
-(cyberdeck-env313) (base) ibo@920:~/LTS_Cyberdeck_Scripts$ curl -X POST http://localhost:8080/api/embeddings \
+(cyberdeck-env313) (base) ibo@920:~/LTS_Cyberdeck_Scripts$ curl -X 
+POST http://localhost:8080/api/embeddings \
   -H "Content-Type: application/json" \
   -d '{"model":"all-minilm:latest","prompt":"test"}' | python3 -m json.tool
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -448,11 +467,11 @@ python3 -m json.tool
 
 --
 Issue 1: HAProxy configuration error
-The error shows that HAProxy can't find the servers for obsidian_backend and web_backend because those services 
-aren't running. But more importantly, the wiki_backend also shows "no server available" initially because 
-HAProxy started before the wiki handler.
-The good news is that after you started the wiki handler, the HAProxy routing is working! I can see 
-from your test that:
+The error shows that HAProxy can't find the servers for obsidian_backend and 
+web_backend because those services aren't running. But more importantly, 
+the wiki_backend also shows "no server available" initially because HAProxy 
+started before the wiki handler. The good news is that after you started the 
+wiki handler, the HAProxy routing is working! I can see from your test that:
     curl http://localhost:8080/wiki/health works ✅
     curl http://localhost:8080/api/embeddings works ✅
 
@@ -495,7 +514,8 @@ haproxy[407358]: backend wiki_backend has no server available!
 Broadcast message from systemd-journald@920 (Mon 2025-12-22 17:01:12 CET):
 haproxy[407358]: backend wiki_backend has no server available!
 
-{"status":"healthy","records":0,"ha_proxy_reachable":false,"ollama_available":true,"model":"all-minilm:latest",
+{"status":"healthy","records":0,"ha_proxy_reachable":false,"ollama_available":true,
+"model":"all-minilm:latest",
 "data_file":"/home/ibo/Pooled-Storage/CyberdeckDB/wiki_data.jsonl"}
 2. Ollama API via HAProxy:
 ✅ Embedding successful (dim: 384)
@@ -592,11 +612,12 @@ python3 -m json.tool
 ============================================================
 (cyberdeck-env313) (base) ibo@920:~/LTS_Cyberdeck_Scripts$ 
 
-You're right! We're so close! The error is that we're trying to use await inside a non-async function. 
+You're right! We're so close! The error is that we're trying to use await inside 
+a non-async function. 
 The endElement method in the SAX handler is not async, so we can't use await there.
 
-Let me fix this issue quickly. The problem is in line 353 of your script. We need to restructure how we 
-handle batch sending. Here's the fixed version:
+Let me fix this issue quickly. The problem is in line 353 of your script. We need 
+to restructure how we handle batch sending. Here's the fixed version:
 
 ./26_start_wiki_processing.sh
 🚀 Starting Wikipedia Processing System
@@ -799,10 +820,11 @@ This is actually normal and expected! Here's why:
         75% I/O: Reading XML, cleaning text, writing JSONL
         15% Network: Sending requests to Ollama nodes
         10% CPU: Embedding computation (distributed across nodes)
-    Sequential Processing: Your current script processes pages one by one, then sends batches. 
+    Sequential Processing: Your current script processes pages one by one, 
+    then sends batches. 
     This creates "gaps" where nodes wait for the next batch.
-    HAProxy Round-Robin: Requests are evenly distributed, but there aren't enough concurrent 
-    requests to saturate all nodes simultaneously.
+    HAProxy Round-Robin: Requests are evenly distributed, but there aren't 
+    enough concurrent requests to saturate all nodes simultaneously.
 
 (cyberdeck-env313) (base) ibo@920:~/LTS_Cyberdeck_Scripts$ ./cyberdeck_diagnostic.sh
 🔍 CYBERDECK COMPREHENSIVE DIAGNOSTIC

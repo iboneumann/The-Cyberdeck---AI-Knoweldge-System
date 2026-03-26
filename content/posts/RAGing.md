@@ -7,19 +7,19 @@ weight = 9
 
 ### Teaching AI models by RAGing
 
- I RAGed my chats... with DeepSeek
-
-So RAG is this: Retrieval-Augmented Generation (RAG): Create a vector
-database of your conversations, allowing models to reference your
-past discussions when answering new questions
-
-I now have on a used Lenovo M920 running Linux Mint 19.3, shy of an
-upgrade to 20 due to compatibility issue somethings, a DeepSeek-R1:7b
-in 16GB, because the other bar said good bye for ever recently,
-that takes my DeepSeek Chat history as its knowledge.
-
-That's personal stuff and so this happens:
-
+ I RAGed my chats... with DeepSeek  
+  
+So RAG is this: Retrieval-Augmented Generation (RAG): Create a vector  
+database of your conversations, allowing models to reference your  
+past discussions when answering new questions  
+  
+I now have on a used Lenovo M920 running Linux Mint 19.3, shy of an  
+upgrade to 20 due to compatibility issue somethings, a DeepSeek-R1:7b  
+in 16GB, because the other bar said good bye for ever recently,  
+that takes my DeepSeek Chat history as its knowledge.  
+  
+That's personal stuff and so this happens:  
+  
 ```batch
 You: Tell me about Cyberpunk, please.
 Assistant: Thinking...

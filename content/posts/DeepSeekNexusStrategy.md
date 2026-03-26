@@ -5,12 +5,12 @@ title = "DeepSeek - The Nexus Strategy"
 weight = 26
 +++
 
-To continue we have to better understand again the current situation.
-
-DeepSeek is the ideal compagnion as a Lone Wolf Hacker being into 
-research. I simplified all Python scripts to be more human readable and
-left the here very important reasoning visible as integral part of the 
-evalutaion process.
+To continue we have to better understand again the current situation.  
+  
+DeepSeek is the ideal compagnion as a Lone Wolf Hacker being into   
+research. I simplified all Python scripts to be more human readable and  
+left the here very important reasoning visible as integral part of the   
+evalutaion process.  
 ```batch
 Is this (Obsidian Deck) script RAGing the Vault or searching the Vault?
 

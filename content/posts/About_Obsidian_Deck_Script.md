@@ -7,38 +7,39 @@ weight = 6
 
 ### About The Obsidian Deck & AI parser Script
 
-Obviously, that is quite a bit of a script and
-part of a set of scripts running in a Python
-environment.
-
-All scripts have been created using DeepSeek
-and underwent sever testing.
-
-DeepSeek does not print functional scripts,
-but will correct and adjust the script it wrote
-based on error and feedback.
-
-The system is a Linux Mint 19.3 which by
-excessive pythoning is impossible to be upgraded,
-easily, with several different Ollama llama
-models spread over the several computers.
-
-Installing all required components is not for
-the faint hearted, but and adventure and journey
-creating the most stable Linux OS I ever used.
-This Cluster is rock solid.
-
-Ollama models also take no advantage of the
-Beowulf Cluster, but the Python libraries the
-scripts pull do in some cases.
-
-Designing the batch processing scripts into a
-long chain architecture using the computer
-cluster on a LAN level to split the workload
-up into junks served to the on LAN waiting ollama
-servers does help tremendously to save time.
-
-This is the AIparser10.py:
+Obviously, that is quite a bit of a script and  
+part of a set of scripts running in a Python  
+environment.  
+  
+All scripts have been created using DeepSeek  
+and underwent sever testing.  
+  
+DeepSeek does not print functional scripts,  
+but will correct and adjust the script it wrote  
+based on error and feedback.  
+  
+  
+The system is a Linux Mint 19.3 which by  
+excessive pythoning is impossible to be upgraded,  
+easily, with several different Ollama llama  
+models spread over the several computers.  
+  
+Installing all required components is not for  
+the faint hearted, but and adventure and journey  
+creating the most stable Linux OS I ever used.  
+This Cluster is rock solid.  
+  
+Ollama models also take no advantage of the  
+Beowulf Cluster, but the Python libraries the  
+scripts pull do in some cases.  
+  
+Designing the batch processing scripts into a  
+long chain architecture using the computer  
+cluster on a LAN level to split the workload  
+up into junks served to the on LAN waiting ollama  
+servers does help tremendously to save time.  
+  
+This is the AIparser10.py:  
 ```batch
 import os
 import re

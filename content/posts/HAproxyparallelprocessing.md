@@ -5,24 +5,24 @@ title = "HAproxy for parallelisation"
 weight = 30
 +++
 
-I have slow hardware in need of every efficiency trick in the book. While the
-CPU load can be shared by the Beowulf Cluster, even so not by all software but
-by all libriaries and OS implementations that are parellelized and of course
-dedicated parallel processing designed software, the Ollama architecture does
-not have that implemented per default.
-
-After some testing DeepSeek suggested eventaully a HAProxy server set up to be
-installed on the Ubuntu Serer head node and the difference in processing
-700 notes to create Obsidian tags went down from several hours to minutes.
-
-This is the DeepSeek explination in scientific English on University enabled
-level. No Hacker Dude slang...
-
-DeepSeek.
-I am having a blog and thesis website about building a Cyberdeck AI Knowledge 
-System. Please summarize what we just did for me as chapter in for the website 
-and blogg with your words that i can copy and paste.
-
+I have slow hardware in need of every efficiency trick in the book. While the  
+CPU load can be shared by the Beowulf Cluster, even so not by all software but  
+by all libriaries and OS implementations that are parellelized and of course  
+dedicated parallel processing designed software, the Ollama architecture does  
+not have that implemented per default.  
+  
+After some testing DeepSeek suggested eventaully a HAProxy server set up to be  
+installed on the Ubuntu Serer head node and the difference in processing  
+700 notes to create Obsidian tags went down from several hours to minutes.  
+  
+This is the DeepSeek explination in scientific English on University enabled  
+level. No Hacker Dude slang...  
+  
+DeepSeek.  
+I am having a blog and thesis website about building a Cyberdeck AI Knowledge   
+System. Please summarize what we just did for me as chapter in for the website   
+and blogg with your words that i can copy and paste.  
+  
 ```batch
 # Building a Distributed AI Pipeline: From Single-Node Bottlenecks 
 to 

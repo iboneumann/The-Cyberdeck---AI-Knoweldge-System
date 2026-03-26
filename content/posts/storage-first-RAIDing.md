@@ -5,22 +5,22 @@ title = "Storage First - RAIDing"
 weight = 21
 +++
 
-I decided to start organizing the Cyberdeck storage situation
-by creating RAIDs over those Computers stuffed with USB devices.
-
-Also, I want to demonstrate the use of large online models. They
-are restricted in their chat length, but free of charge, while 
-the hardware costs to run a large model like DeepSeek R1 is 
-incredible creating a inefficient set up, except the user is 
-also a hardcore high-end gamer.
-
-After walking through establishing RAIDs without data loss over
-two Computers that now can be both accessed using the individual
-drives as much as in a RAID way combining all folders, I asked
-DeepSeek to create a chapter for a Thesis in scientific IT
-Computing.
-
-That's the outcome:
+I decided to start organizing the Cyberdeck storage situation  
+by creating RAIDs over those Computers stuffed with USB devices.  
+  
+Also, I want to demonstrate the use of large online models. They  
+are restricted in their chat length, but free of charge, while   
+the hardware costs to run a large model like DeepSeek R1 is   
+incredible creating a inefficient set up, except the user is   
+also a hardcore high-end gamer.  
+  
+After walking through establishing RAIDs without data loss over  
+two Computers that now can be both accessed using the individual  
+drives as much as in a RAID way combining all folders, I asked  
+DeepSeek to create a chapter for a Thesis in scientific IT  
+Computing.  
+  
+That's the outcome:  
 ```batch
 # **Chapter 5:
 # Implementation of a Unified Storage System Using MergerFS**

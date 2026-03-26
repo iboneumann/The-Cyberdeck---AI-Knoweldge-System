@@ -5,17 +5,17 @@ title = "Single Vs Serial designe"
 weight = 23
 +++
 
-Single Vs Serial design
-
-Given a set of data points being specific to a subject, how would 
-different llama models change their behaviour compared to each 
-other? 
-As an example: a set of books and research papers specific to material 
-science combined with biochemics books and research papers having the 
-task to evaluate material research from renewable base materials. Take 
-three different smaller models and two different in orientation large 
-models.
-
+Single Vs Serial design  
+  
+Given a set of data points being specific to a subject, how would   
+different llama models change their behaviour compared to each   
+other?   
+As an example: a set of books and research papers specific to material   
+science combined with biochemics books and research papers having the   
+task to evaluate material research from renewable base materials. Take   
+three different smaller models and two different in orientation large   
+models.  
+  
 ```batch
 The behavior of different LLaMA models when applied to your specific 
 material science and biochemistry dataset would vary significantly based 
