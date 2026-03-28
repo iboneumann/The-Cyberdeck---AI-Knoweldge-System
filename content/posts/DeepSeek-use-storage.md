@@ -7,20 +7,15 @@ weight = 20
 
 Large AI model design use  
   
-The Cybereck project is bigger than the DIY builds based on a Raspi and  
-even those might have started with a large model AI chat.  
+The Cybereck project is bigger than the DIY builds based on a Raspi and even those might have started with a large model AI chat.  
   
-The large models online add perfectly to designing a dedicated small  
-AI model using project, like The Cyberdeck AI Knowledge System.  
+The large models online add perfectly to designing a dedicated small AI model using project, like The Cyberdeck AI Knowledge System.  
   
-Storage is important and using a LAN set up to create an integrated  
-system creates some challenges. First I created with DeepSeek a   
+Storage is important and using a LAN set up to create an integrated system creates some challenges. First I created with DeepSeek a   
 script that runs over the Cyberdeck and lists all storage devices.  
   
-These chapters show how I work with DeepSeek to make educated decisions  
-on the concrete Cyberdeck design. I leave the thought process even  
-so reading them helps to stop DeepSeek from heading the wrong way usually  
-by having given missing information.  
+These chapters show how I work with DeepSeek to make educated decisions on the concrete Cyberdeck design. I leave the thought process even  
+so reading them helps to stop DeepSeek from heading the wrong way usually by having given missing information.  
   
 The opening text was prepared in Text Editor.  
   

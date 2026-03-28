@@ -7,12 +7,8 @@ weight = 8
 
 ### Outsmarting Google by AI use
 
-Google results are not showing only top domains, but are always  
-several pages from only a few domains, really.  
-  
-Finding information needs Google, being the only internet index   
-currently.  
-  
+Google results are not showing only top domains, but are always several pages from only a few domains, really.  
+Finding information needs Google, being the only internet index currently.  
 This script breaks down the results to its domains and gives a summery:  
   
 ```batch 

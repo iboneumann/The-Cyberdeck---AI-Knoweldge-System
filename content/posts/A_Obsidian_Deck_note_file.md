@@ -7,28 +7,19 @@ weight = 7
 
 ### The Obsidian Deck note .md file
 
-`tag`, `concept`, `meta_tag`, `meta_keyword` are the # tags  
-added by the AI parser. Instead of manually tagging 600 files  
-the script uses a local installed LLM to give useful tags  
-to the large amount of files.  
-It creates quite a set of tags and some connected tags are  
-combined in meta_tags enabling different views in the   
-Obsidian software and better clustering of the notes for  
-further analysis.  
+`tag`, `concept`, `meta_tag`, `meta_keyword` are the # tags added by the AI parser. Instead of manually tagging 600 files  
+the script uses a local installed LLM to give useful tags to the large amount of files.  
+It creates quite a set of tags and some connected tags are combined in meta_tags enabling different views in the   
+Obsidian software and better clustering of the notes for further analysis.  
   
-The LLM models are quite good in finding good tags and   
-meta tags. DeepSeek considered the Cyberdeck to be a Game  
-Simulation rather then an actual thing of real use and therefore  
-was in its thought process quite close to the Cyberpunk games.  
+The LLM models are quite good in finding good tags and meta tags. DeepSeek considered the Cyberdeck to be a Game  
+Simulation rather then an actual thing of real use and therefore was in its thought process quite close to the Cyberpunk games.  
   
-Even so possible and most likely more powerful than a Unix   
-Server is that Beowulf Long Chain Ollama models project not  
-intended to crack any systems, but based on the actual   
-Original Hacker idea of Understanding and Knowledge  
+Even so possible and most likely more powerful than a Unix Server is that Beowulf Long Chain Ollama models project not  
+intended to crack any systems, but based on the actual Original Hacker idea of Understanding and Knowledge  
 Acquisition.  
   
-Never the less was that the start and thereby here a sample  
-from the Vault:  
+Never the less was that the start and thereby here a sample from the Vault:  
 
 ```batch
 ---

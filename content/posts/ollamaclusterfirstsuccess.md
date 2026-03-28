@@ -5,14 +5,11 @@ title = 'Ollama Cluster first success'
 weight = 33
 +++
   
-Using two ports at the HAProxy server I have managed to now run two raging  
-scripts in parallel next to each other using the same set of 6 nodes all  
+Using two ports at the HAProxy server I have managed to now run two raging scripts in parallel next to each other using the same set of 6 nodes all  
 having a single Ollama instance running.   
   
-At this time they only used the same model simultaniously dedicated   
-to RAGing.  
+At this time they only used the same model simultaniously dedicated to RAGing.  
   
-Eventually, this set up will handle complex routing between dedicated  
-Expert AIs.  
+Eventually, this set up will handle complex routing between dedicated Expert AIs.  
   
 ![First time Cluster is functional](/images/parallelRAGprocessing.png)

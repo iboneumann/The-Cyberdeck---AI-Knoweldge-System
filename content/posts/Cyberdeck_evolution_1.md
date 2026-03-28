@@ -7,40 +7,28 @@ weight = 14
 
 ### Under constant construction
   
-The Cyberdecks of the Cyberpunk Sci-Fi genre are no simple off the shelf  
-computers, they are the most powerful tools in the Dark Sci World of  
-Cyberpunk and Shadowrun and constantly modified and upgraded. In many  
-respects they are the Sci-Fi version of Gaming Hardware that is often  
+The Cyberdecks of the Cyberpunk Sci-Fi genre are no simple off the shelf computers, they are the most powerful tools in the Dark Sci World of  
+Cyberpunk and Shadowrun and constantly modified and upgraded. In many respects they are the Sci-Fi version of Gaming Hardware that is often  
 as often in parts as under heavy graphics use.  
   
-The RAGing triggered demand for information in text form to create data  
-points for the AI models.   
+The RAGing triggered demand for information in text form to create data points for the AI models.   
   
-That means the googlesearch.py script needs an update and additions. This  
-is how textextractor.py and rag_prepare.py happened.  
+That means the googlesearch.py script needs an update and additions. This is how textextractor.py and rag_prepare.py happened.  
   
-googlesearch.py now saves in a dedicated folder a .json file that is  
-picked up by both textextractor.py and rag_prepare.py to create texts from  
+googlesearch.py now saves in a dedicated folder a .json file that is picked up by both textextractor.py and rag_prepare.py to create texts from  
 the website and prepare for the WIKI RAGed AI system data points.  
   
-Searching for Free lesions on chemics gives than opportunity to create  
-essays using the local AI with commands like these:  
-essay chemical basis of plastics  
-essay source materials of polymerization  
-essay plastics made from Sand as one raw material  
+Searching for Free lesions on chemics gives than opportunity to create essays using the local AI with commands like these:  
+essay chemical basis of plastics essay source materials of polymerization essay plastics made from Sand as one raw material  
   
-The essays are stored as .md files and can than be also RAGed into an AI.  
-RAGing reasoning results is comparable to learning conclusions. Without  
-checking is there a good chance that none of the websites mentions  
-explicitly any polymere production in and desert, but using the Cybderdeck  
+The essays are stored as .md files and can than be also RAGed into an AI. RAGing reasoning results is comparable to learning conclusions. Without  
+checking is there a good chance that none of the websites mentions explicitly any polymere production in and desert, but using the Cybderdeck  
 an essay dedicated to that can be produced.  
   
-Next time the RAGed AI system has a data point and does not need to  
-conclude anymore about that specific topic being able to continue from  
+Next time the RAGed AI system has a data point and does not need to conclude anymore about that specific topic being able to continue from  
 there.  
   
-Just as the difference between the learner who understood and who just  
-quotes.   
+Just as the difference between the learner who understood and who just quotes.   
   
 ```batch
 (cyberdeck-env313) ibo@M920:~/Scripts$ python3 textextractor.py \

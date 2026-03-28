@@ -5,10 +5,8 @@ title = "AI Compagnions"
 weight = 18
 +++
 
-A use case for the upgraded RAGing and Google Search part of the   
-Cyberdeck is bespoke AI solutions tailored to the preferences of   
-individual users. That for well could be an AI system placed into  
-a car being attached to the radio, GPS and parking camera system  
+A use case for the upgraded RAGing and Google Search part of the Cyberdeck is bespoke AI solutions tailored to the preferences of   
+individual users. That for well could be an AI system placed into a car being attached to the radio, GPS and parking camera system  
 creating an Advanced Travel and Motor Touring Guide.  
   
 So, that's what DeepSeek thinks about that:  
