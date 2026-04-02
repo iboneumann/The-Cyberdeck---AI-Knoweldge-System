@@ -347,5 +347,5 @@ balancer to learn.
 
 Now go wire the websearch into the loop – that’s where the magic happens.
 ```
-![Load Balancer is functional in the first version](/images/cyberdecklbmonitorfunctional.png)y
+![Load Balancer is functional in the first version](/images/cyberdecklbmonitorfunctional.png)
 

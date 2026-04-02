@@ -1,6 +1,6 @@
 +++
 date = '2026-04-02T14:08:25+02:00'
-draft = true
+draft = false
 title = 'Cyberdeck as Architecture - AI Ghosts'
 weight = 35
 +++
