@@ -83,44 +83,44 @@ For a RAG system where you need the model to act as a clean, reliable reasoning 
 faithfully uses the data you provide, these models are your best bets. They are known for  
 strong performance and instruction-following in their size classes.  
   
-    Best Overall for RAG & Long Context: phi3.5:3.8b (or phi3.5-mini-instruct)  
-        Why it's great: Phi-3.5 Mini is specifically noted for its exceptional performance   
-        in RAG applications. Its key strength is handling very long context windows 
-        (book-length prompts), making it ideal for working with large documents . It's a 
-        specialist for this task.
-
-    Best for Complex Reasoning & Deep Logic: nanbeige4.1:3b
-        Why it's great: This model is a standout, punching far above its weight class. It 
-        uses internal chain-of-thought reasoning (<think> blocks) to work through complex 
-        problems, even beating much larger models on some reasoning benchmarks . If your 
-        RAG application involves multi-step logic, routing, or agentic tasks, this is a 
-        compelling choice.
-
-    Best Coding & Math Specialist: qwen2.5:7b or qwen2.5:7b-instruct
-        Why it's great: If your RAG system is used for technical documentation, code 
-        generation, or data analysis, this is the model to choose. It dominates benchmarks 
-        in coding and mathematical reasoning for its size .
-
-    Most Balanced & Versatile All-Rounder: llama3.2:3b
-        Why it's great: As a starting point, this model is a safe bet. It provides a great 
-        balance of strong instruction-following, speed, and capability. It’s a solid, 
-        well-rounded choice if you want to test a prototype before scaling up.
-
+  Best Overall for RAG & Long Context: phi3.5:3.8b (or phi3.5-mini-instruct)  
+   Why it's great: Phi-3.5 Mini is specifically noted for its exceptional performance   
+   in RAG applications. Its key strength is handling very long context windows   
+   (book-length prompts), making it ideal for working with large documents . It's a   
+   specialist for this task.  
+  
+  Best for Complex Reasoning & Deep Logic: nanbeige4.1:3b  
+   Why it's great: This model is a standout, punching far above its weight class. It   
+   uses internal chain-of-thought reasoning (<think> blocks) to work through complex   
+   problems, even beating much larger models on some reasoning benchmarks . If your   
+   RAG application involves multi-step logic, routing, or agentic tasks, this is a   
+   compelling choice.  
+  
+  Best Coding & Math Specialist: qwen2.5:7b or qwen2.5:7b-instruct  
+   Why it's great: If your RAG system is used for technical documentation, code   
+   generation, or data analysis, this is the model to choose. It dominates benchmarks   
+   in coding and mathematical reasoning for its size .  
+  
+  Most Balanced & Versatile All-Rounder: llama3.2:3b  
+   Why it's great: As a starting point, this model is a safe bet. It provides a great   
+   balance of strong instruction-following, speed, and capability. It’s a solid,   
+   well-rounded choice if you want to test a prototype before scaling up.  
+  
 💡 How to Make Your Choice  
 Here is a practical guide to help you decide:  
-
-    Start with a 3B-parameter model: A 3B model (like phi3.5 or nanbeige4.1) offers a 
-    fantastic sweet spot. They are small enough to run quickly on most consumer hardware but 
-    have the architectural sophistication to perform complex reasoning tasks faithfully.
-
-    Use 1B models for prototyping or simple tasks: Models like llama3.2:1b or smollm2:1.7b  
-    are excellent for testing your RAG pipeline logic, classification tasks, or if you are 
-    severely resource-constrained.
-
-    Scale up to 7B-9B models for production: When moving to production where accuracy is 
-    critical, models in the 7B-9B range (like qwen2.5:7b or ministral-3:8b) provide the 
-    highest level of reliability and are worth the extra hardware investment.
-
+  
+   Start with a 3B-parameter model: A 3B model (like phi3.5 or nanbeige4.1) offers a  
+   fantastic sweet spot. They are small enough to run quickly on most consumer hardware but   
+   have the architectural sophistication to perform complex reasoning tasks faithfully.  
+  
+   Use 1B models for prototyping or simple tasks: Models like llama3.2:1b or smollm2:1.7b  
+   are excellent for testing your RAG pipeline logic, classification tasks, or if you are  
+   severely resource-constrained.  
+  
+   Scale up to 7B-9B models for production: When moving to production where accuracy is  
+   critical, models in the 7B-9B range (like qwen2.5:7b or ministral-3:8b) provide the   
+   highest level of reliability and are worth the extra hardware investment.  
+  
 In summary, while a small model can retrieve the right information, a model with strong  
 reasoning and instruction-following capabilities (even at 3B parameters) is what will  
 transform that information into a clean, logical, and reliable answer.  
@@ -135,40 +135,40 @@ logic chains instead of abstract texts would that create tailored reasoning usin
   
 We need to answer the follow-up questions. The user is asking two things:  
   
-    Is instruction following comparable to RISC vs CISC architecture in CPUs, meaning would  
-    smaller models need more split-up commands with higher precision?
-
-    Can synthesis & reasoning be altered by RAG? If taking a very logic text that contains 
-    logic chains instead of abstract texts, would that create tailored reasoning using smaller 
-    models?
-
+   Is instruction following comparable to RISC vs CISC architecture in CPUs, meaning would  
+   smaller models need more split-up commands with higher precision?  
+  
+   Can synthesis & reasoning be altered by RAG? If taking a very logic text that contains   
+   logic chains instead of abstract texts, would that create tailored reasoning using smaller   
+   models?  
+  
 We should provide a clear, concise answer, connecting the analogy and then addressing how RAG   
 context can compensate for smaller model weaknesses.  
-  
+   
 Let's structure:  
-    Acknowledge the analogy: RISC vs CISC is a decent analogy but not perfect. Smaller models 
-    (like RISC) may require more explicit, decomposed instructions to perform complex tasks, 
-    whereas larger models (like CISC) can handle more complex, higher-level instructions in 
-    one go. However, it's more about model capacity and emergent abilities.
-
-    Yes, smaller models often benefit from "chain-of-thought" prompting or breaking down tasks 
-    into simpler steps, akin to RISC's simpler instructions.
-
-    For synthesis & reasoning: RAG can indeed alter the outcome by providing highly structured, 
-    logical texts that explicitly show reasoning chains. Smaller models, which may struggle with 
-    abstract inference, can effectively follow explicit logical steps if those steps are present 
-    in the retrieved context. This is essentially "in-context learning" where the model mimics 
-    the reasoning patterns shown.
-
-    However, there's a limit: the model still needs to have enough capacity to maintain coherence 
-    over the chain and perform the necessary operations. But for many practical RAG scenarios, 
-    providing well-structured, step-by-step logic can enable smaller models to perform surprisingly 
-    well.
-
-    Recommendation: if using a smaller model, design your retrieval to include not just facts but 
-    also explicit reasoning chains, perhaps by preprocessing documents to extract or highlight 
-    logical flows.
-
+   Acknowledge the analogy: RISC vs CISC is a decent analogy but not perfect. Smaller models   
+   (like RISC) may require more explicit, decomposed instructions to perform complex tasks,   
+   whereas larger models (like CISC) can handle more complex, higher-level instructions in   
+   one go. However, it's more about model capacity and emergent abilities.  
+  
+   Yes, smaller models often benefit from "chain-of-thought" prompting or breaking down tasks   
+   into simpler steps, akin to RISC's simpler instructions.  
+  
+   For synthesis & reasoning: RAG can indeed alter the outcome by providing highly structured,   
+   logical texts that explicitly show reasoning chains. Smaller models, which may struggle with   
+   abstract inference, can effectively follow explicit logical steps if those steps are present   
+   in the retrieved context. This is essentially "in-context learning" where the model mimics   
+   the reasoning patterns shown.  
+  
+   However, there's a limit: the model still needs to have enough capacity to maintain coherence   
+   over the chain and perform the necessary operations. But for many practical RAG scenarios,   
+   providing well-structured, step-by-step logic can enable smaller models to perform surprisingly   
+   well.  
+  
+   Recommendation: if using a smaller model, design your retrieval to include not just facts but   
+   also explicit reasoning chains, perhaps by preprocessing documents to extract or highlight   
+   logical flows.  
+  
 We'll keep it conversational and helpful.  
   
 Excellent questions—they cut to the heart of how model size, instruction design, and retrieval  
@@ -178,29 +178,29 @@ interact.
 That’s a clever analogy, and it holds up reasonably well at a conceptual level, though the  
 underlying mechanisms are different.   
    
-    RISC (Reduced Instruction Set Computer): Simple, atomic instructions. To do something 
-    complex, you must string many of them together. The burden is on the compiler (or in our 
-    case, the prompt engineer) to decompose the task.
-
-    CISC (Complex Instruction Set Computer): A single instruction can encapsulate a multi‑step 
-    operation. The hardware (or the model’s internal capacity) handles complexity internally.
-
-In the same vein:
-    Smaller models often struggle to follow a single, complex instruction like “Summarise the 
-    following three documents, compare their conclusions, and output the comparison as a JSON 
-    object with fields ‘summary’ and ‘comparison’”. They may omit steps, mix up information, 
-    or hallucinate.
+   RISC (Reduced Instruction Set Computer): Simple, atomic instructions. To do something   
+   complex, you must string many of them together. The burden is on the compiler (or in our   
+   case, the prompt engineer) to decompose the task.  
+  
+   CISC (Complex Instruction Set Computer): A single instruction can encapsulate a multi‑step   
+   operation. The hardware (or the model’s internal capacity) handles complexity internally.  
+  
+In the same vein:  
+   Smaller models often struggle to follow a single, complex instruction like “Summarise the   
+   following three documents, compare their conclusions, and output the comparison as a JSON   
+   object with fields ‘summary’ and ‘comparison’”. They may omit steps, mix up information,   
+   or hallucinate.  
     
-    To get reliable results, you often need to split the task:
-        “Summarise document A.”
-        “Summarise document B.”
-        “Compare the two summaries and output JSON.”
-        This is analogous to writing RISC‑style code—more steps, but each step is simple enough 
-        for the model to execute faithfully.
-
-    Larger models (7B+) can digest that single complex instruction and reliably perform all 
-    steps internally. They have more “internal wiring” (parameters) to handle the composition 
-    of tasks without explicit decomposition.
+  To get reliable results, you often need to split the task:  
+   “Summarise document A.”  
+   “Summarise document B.”  
+   “Compare the two summaries and output JSON.”  
+   This is analogous to writing RISC‑style code—more steps, but each step is simple enough   
+   for the model to execute faithfully.  
+  
+   Larger models (7B+) can digest that single complex instruction and reliably perform all   
+   steps internally. They have more “internal wiring” (parameters) to handle the composition   
+   of tasks without explicit decomposition.   
   
 So yes: smaller models generally require higher precision in prompting and more granular task  
 decomposition to achieve the same level of instruction‑following reliability.  
@@ -210,45 +210,45 @@ Absolutely. RAG is not just about injecting facts—it also lets you inject stru
 and reasoning patterns.  
   
 If you retrieve a text that already contains a clear logical flow—for example:  
-    Step 1: Identify the input.
-    Step 2: Apply rule X.
-    Step 3: If result > threshold, then…
+   Step 1: Identify the input.   
+   Step 2: Apply rule X.  
+   Step 3: If result > threshold, then…  
   
 A smaller model can often follow that explicit chain even if it would have struggled to invent  
 such reasoning on its own. This is sometimes called “in‑context reasoning” or “reasoning by example”.  
   
 In other words:  
-    If you feed a smaller model abstract, loosely connected paragraphs, its own weak reasoning will 
-    fill the gaps (often incorrectly).
-
-    If you feed it structured logic, explicit step‑by‑step derivations, or decision trees, the model  
-    essentially acts as a faithful executor of the logic you’ve provided.
-
+   If you feed a smaller model abstract, loosely connected paragraphs, its own weak reasoning will   
+   fill the gaps (often incorrectly).  
+  
+   If you feed it structured logic, explicit step‑by‑step derivations, or decision trees, the model  
+   essentially acts as a faithful executor of the logic you’ve provided.  
+  
 This works because the transformer’s core strength is pattern completion. When you give it a clear  
 reasoning pattern in the context, it can continue or apply that pattern to new inputs—even if the  
 model’s own “native” reasoning capacity is modest.  
   
 Practical takeaway for your RAG system:  
-    For smaller models, curate your retrieval to return not just facts but also explanatory chains  
-    or worked examples of logic.
-
-    If your source documents are dense and abstract, consider pre‑processing them (e.g., using a 
-    larger model once) to extract explicit reasoning steps, then index those steps.
-
-    This way, you effectively offload reasoning to the retrieval step, letting the small model 
-    focus on execution rather than invention.
-
+   For smaller models, curate your retrieval to return not just facts but also explanatory chains  
+   or worked examples of logic.  
+  
+   If your source documents are dense and abstract, consider pre‑processing them (e.g., using a   
+   larger model once) to extract explicit reasoning steps, then index those steps.  
+  
+   This way, you effectively offload reasoning to the retrieval step, letting the small model   
+   focus on execution rather than invention.  
+  
 The bottom line  
-    RISC vs CISC is a useful mental model: smaller models need more explicit, decomposed 
-    instructions.
-
-    RAG can radically improve reasoning by providing structured logic chains that smaller models can 
-    simply “follow.”
-
-    Combining the two—using a small model with highly decomposed instructions and retrieval that 
-    surfaces explicit reasoning—can yield surprisingly robust results, often rivaling larger models 
-    for specific tasks.
-
+   RISC vs CISC is a useful mental model: smaller models need more explicit, decomposed   
+   instructions.  
+  
+   RAG can radically improve reasoning by providing structured logic chains that smaller models can   
+   simply “follow.”  
+  
+   Combining the two—using a small model with highly decomposed instructions and retrieval that   
+   surfaces explicit reasoning—can yield surprisingly robust results, often rivaling larger models  
+   for specific tasks.  
+  
 If you’d like, I can suggest a concrete prompting pattern or retrieval strategy tailored to the type   
 of documents you’re working with.  
   
@@ -258,11 +258,11 @@ all connected mpiuser layer and my ibo standard user. If I rag a small LLM like 
 turn it into a system that does automated operating system tasks. So, an OS is by its very name a  
 disk operating system. In a complex LAN set up, that has a certain layout of storage and file and  
 folder structre I could train an LLM on that set up to perform tasks like:  
-
+  
 Transfer all music files to the backup. If I RAGed the small llm with a set of instructions like:  
 Music backup: 1. copy all mp3 and wav files to  
 lan_location by using linux_terminal_command_for_mpiuser_here  
-
+  
 We need to parse user's query. They are asking about building a terminal system that is aware  
 of their "Cyberdeck called System" which is a Beowulf cluster (office hardware). It has passwordless  
 ssh, mpiuser layer, and ibo standard user. They want to use a small LLM (phi3.5:3.8b) with RAG to  
@@ -282,19 +282,19 @@ suitable. Also address "OS is by its very name a disk operating system" - that's
 we can acknowledge.  
   
 Key points:  
-    RAG provides context, not training. So the LLM won't "learn" the structure permanently but  
-    can be given the structure in the prompt each time.
-
-    Safety: executing commands based on LLM output is risky. Need validation.
-
-    phi3.5:3.8b is small but can follow instructions well. With explicit step-by-step 
-    instructions and a description of the system, it could generate correct commands.
-
-    The user mentions "no password ssh all connected mpiuser layer" - that's convenient but also 
-    a security risk if LLM hallucinates destructive commands.
-
-    They want automated OS tasks. Could be done with a script that takes LLM-generated commands 
-    after human approval.
+   RAG provides context, not training. So the LLM won't "learn" the structure permanently but  
+   can be given the structure in the prompt each time.  
+  
+   Safety: executing commands based on LLM output is risky. Need validation.  
+  
+   phi3.5:3.8b is small but can follow instructions well. With explicit step-by-step   
+   instructions and a description of the system, it could generate correct commands.  
+  
+   The user mentions "no password ssh all connected mpiuser layer" - that's convenient but also   
+   a security risk if LLM hallucinates destructive commands.  
+  
+   They want automated OS tasks. Could be done with a script that takes LLM-generated commands   
+   after human approval.  
   
 We should answer concisely, acknowledging the clever idea, but warning about safety, and suggesting  
 a pattern: provide system context in RAG, then ask LLM to output commands in a structured way  
@@ -314,36 +314,37 @@ Let me break down what works, what needs care, and how to make it reliable.
    
 ✅ Yes, a small LLM + RAG can drive automated OS tasks  
 With a well‑structured RAG prompt that includes:  
-    Your cluster’s filesystem hierarchy
-    User accounts (mpiuser, ibo) and their sudo/ssh permissions
-    Common command templates (e.g., rsync, scp, find)
-    A few examples of task → command translation
-
-…a model like phi3.5:3.8b can generate correct shell commands for tasks like:  
+   Your cluster’s filesystem hierarchy  
+   User accounts (mpiuser, ibo) and their sudo/ssh permissions  
+   Common command templates (e.g., rsync, scp, find)  
+   A few examples of task → command translation  
   
-    “Copy all .mp3 and .wav files from /home/ibo/music to /mnt/backup/music on the LAN storage.”
+…a model like phi3.5:3.8b can generate correct shell commands for tasks like:  
+   
+  “Copy all .mp3 and .wav files from /home/ibo/music to /mnt/backup/music on the LAN storage.”  
   
 You don’t need to fine‑tune the model. RAG provides the system specification dynamically.  
  
 🔐 The real challenge: safety, not capability  
 The model can produce commands, but executing them automatically is dangerous because:  
   
-    Hallucinations: it might invent a non‑existent path or a destructive flag 
-    (--delete where not intended).
-
-    It doesn’t truly “understand” idempotence or dependencies.
+   Hallucinations: it might invent a non‑existent path or a destructive flag   
+   (--delete where not intended).  
+  
+   It doesn’t truly “understand” idempotence or dependencies.  
   
 Recommended pattern (human‑in‑the‑loop)  
-    RAG prompt includes:
-        Current directory listing (if relevant)
-        Excerpts from your mpiuser SSH config
-        A few “command templates” like:
+  RAG prompt includes:  
+   Current directory listing (if relevant)  
+   Excerpts from your mpiuser SSH config  
+   A few “command templates” like:  
         
-        music backup:
-          find /home/ibo/music -type f \( -name "*.mp3" -o -name "*.wav" \) -exec rsync -avz {} mpiuser@lan_storage:/backup/music/ \;
+  music backup:  
+   find /home/ibo/music -type f \( -name "*.mp3" -o -name "*.wav" \) -exec rsync -avz {}   
+   mpiuser@lan_storage:/backup/music/ \;  
   
-    LLM outputs a JSON with:
-
+   LLM outputs a JSON with:  
+  
 ```batch  
   json
   
@@ -356,11 +357,11 @@ Recommended pattern (human‑in‑the‑loop)
       "dry_run_first": true
     }
 ```
-
-    A wrapper script:
-        Shows the commands to the user.
-        Requires explicit confirmation (or runs in --dry-run mode first).
-        Optionally logs everything.
+  
+  A wrapper script:  
+   Shows the commands to the user.  
+   Requires explicit confirmation (or runs in --dry-run mode first).  
+   Optionally logs everything.  
   
 This gives you the automation benefit without the “rm -rf /” nightmare.  
    
@@ -371,39 +372,39 @@ The LLM doesn’t need to know that—it just needs to know which paths exist on
 user has which permission.  
   
 With a RAG context that describes:  
-    Node names (node0…nodeN)
-    Shared vs local storage (e.g., NFS mounts)
-    The fact that mpiuser has passwordless SSH to all nodes
+   Node names (node0…nodeN)  
+   Shared vs local storage (e.g., NFS mounts)  
+   The fact that mpiuser has passwordless SSH to all nodes  
   
 …the small LLM can generate correct scp, rsync, or mpirun commands.  
    
 🧪 Practical test you can run today  
-    Prepare a RAG document (a text file) that describes:
+   Prepare a RAG document (a text file) that describes:   
     
-    System: Beowulf cluster, nodes: cyberdeck-[01..04]
-    Users: 
-      - ibo (standard, home /home/ibo)
-      - mpiuser (passwordless SSH to all nodes, can run rsync/scp)
-    Storage:
-      - Local music: /home/ibo/music/
-      - LAN backup location: mpiuser@192.168.1.100:/backup/music/
-    Command style: use rsync with -avz, preserve permissions.
+   System: Beowulf cluster, nodes: cyberdeck-[01..04]  
+   Users:   
+      - ibo (standard, home /home/ibo)  
+      - mpiuser (passwordless SSH to all nodes, can run rsync/scp)  
+   Storage:  
+      - Local music: /home/ibo/music/  
+      - LAN backup location: mpiuser@192.168.1.100:/backup/music/  
+   Command style: use rsync with -avz, preserve permissions.  
   
-    Prompt the model (via ollama run phi3.5:3.8b) with:
+   Prompt the model (via ollama run phi3.5:3.8b) with:  
     
-    [Insert the above RAG text]
-    Task: Copy all .mp3 and .wav files from ibo's music folder to the LAN backup.
-    Output only the shell command(s) as a JSON array.
+   [Insert the above RAG text]  
+   Task: Copy all .mp3 and .wav files from ibo's music folder to the LAN backup.  
+   Output only the shell command(s) as a JSON array.  
   
-    Check the output – Phi‑3.5 will almost certainly give you a correct find 
-    | rsync or scp command.
+   Check the output – Phi‑3.5 will almost certainly give you a correct find   
+   | rsync or scp command.  
   
 🚀 Scaling up to full automation  
 If you want truly unsupervised automation (e.g., cron jobs), consider a two‑model approach:   
   
-    A small, fast model (Phi‑3.5) to generate candidate commands.
-    A second, even smaller model (or a rule‑based validator) to verify that the command only 
-    touches allowed paths and uses allowed flags.
+   A small, fast model (Phi‑3.5) to generate candidate commands.  
+   A second, even smaller model (or a rule‑based validator) to verify that the command only   
+   touches allowed paths and uses allowed flags.  
   
 But for a personal Cyberdeck cluster, a human‑approval step is perfectly fine and much safer.  
    
@@ -411,10 +412,10 @@ Final answer
   
 Yes, you can absolutely build this.  
 Phi‑3.5‑3.8b is capable enough, provided you:  
-    Feed it the exact system layout and command patterns via RAG.
-    Never execute its output blindly—always verify, at least with --dry-run.
-    Decompose complex tasks into smaller steps (RISC‑style prompting).
-
+   Feed it the exact system layout and command patterns via RAG.  
+   Never execute its output blindly—always verify, at least with --dry-run.  
+   Decompose complex tasks into smaller steps (RISC‑style prompting).  
+  
 Your idea turns the cluster into a “conversational OS” – very much in the spirit of a Cyberdeck.  
 Go for it.  
   
@@ -426,12 +427,12 @@ We need to answer: how to create the RAG document to avoid hallucinations when u
 and best practices to minimize model errors.  
   
 Key points:  
-    Use explicit, unambiguous instructions.
-    Include command templates, not just descriptions.
-    Provide constraints and negative examples.
-    Use structured formats (e.g., JSON, YAML, or markdown with code blocks).
-    Include a "do not hallucinate" instruction and examples of correct output.
-    Possibly add a verification step or require the model to output only predefined commands.
+   Use explicit, unambiguous instructions.  
+   Include command templates, not just descriptions.  
+   Provide constraints and negative examples.  
+   Use structured formats (e.g., JSON, YAML, or markdown with code blocks).  
+   Include a "do not hallucinate" instruction and examples of correct output.  
+   Possibly add a verification step or require the model to output only predefined commands.  
   
 The user wants practical guidance on crafting the RAG document.  
 Understood — you want the exact blueprint for writing the RAG document so the small LLM  
@@ -488,29 +489,29 @@ Task: "copy a single file letter.txt to backup"
 BAD OUTPUT (hallucination):  
 "scp /home/ibo/music/*.mp3 mpiuser@cyberdeck-02:/backup/"  
 → Reason: uses scp (not allowed), wrong destination host, no error handling.  
-
+  
 Do NOT generate output like the above.  
   
 🧪 How to use this document in RAG  
-    Store it as a plain text file (no markdown inside the instructions, only code fences 
-    for examples).
-
-    Prepend it to every user query exactly as written.
-
-    Keep it under 2048 tokens – small models start to ignore the middle of long contexts. 
-    If needed, split into multiple RAG chunks and retrieve only the relevant template.
-
+   Store it as a plain text file (no markdown inside the instructions, only code fences  
+   for examples).  
+  
+   Prepend it to every user query exactly as written.  
+  
+   Keep it under 2048 tokens – small models start to ignore the middle of long contexts.   
+   If needed, split into multiple RAG chunks and retrieve only the relevant template.  
+  
 🔒 Extra safety: output validation  
 Even with a perfect document, a small model might still deviate. Add a wrapper script that:  
-    Parses the JSON output.
-    Checks that the command matches one of the allowed patterns (regex or exact prefix).
-    Rejects any command containing forbidden strings (rm, sudo, >, | unless part of allowed 
-    template).
+   Parses the JSON output.  
+   Checks that the command matches one of the allowed patterns (regex or exact prefix).  
+   Rejects any command containing forbidden strings (rm, sudo, >, | unless part of allowed   
+   template).  
   
-    Runs --dry-run first and asks for human confirmation.
+   Runs --dry-run first and asks for human confirmation.  
   
 Example validation in Python:  
-python
+python  
 ```batch
 import json, re
 allowed_pattern = re.compile(r'^(find.*\| rsync|rsync -avz)')
@@ -522,11 +523,11 @@ if not allowed_pattern.match(cmd):
 ✅ Final answer  
 To avoid hallucinations when RAGing a small LLM for OS automation:  
   
-    Write the document as a deterministic lookup table, not prose.
-    Provide command templates with placeholders, not descriptions.
-    Include forbidden lists and negative examples.
-    Enforce a strict JSON output format.
-    Validate the output with a regex‑based wrapper before execution.
+   Write the document as a deterministic lookup table, not prose.  
+   Provide command templates with placeholders, not descriptions.  
+   Include forbidden lists and negative examples.  
+   Enforce a strict JSON output format.  
+   Validate the output with a regex‑based wrapper before execution.  
   
 This turns the LLM from a “reasoner” into a template filler – and that is exactly where  
 small models shine.  
@@ -563,18 +564,18 @@ ELSE action = "proceed"
   
 …the model can understand it, but it will not execute it reliably as a state machine.  
 Small LLMs are poor at tracking multiple boolean variables across steps. They will:  
-    Mix up else if order.
-    Forget which condition was met after a few sentences.
-    Hallucinate extra branches.
-
+   Mix up else if order.  
+   Forget which condition was met after a few sentences.  
+   Hallucinate extra branches.  
+  
 But – if you structure the document as a lookup table combined with a natural language query,  
 the model can act as a decision suggester, not an executor.  
    
 ✅ The correct hybrid architecture  
 Keep the rule engine outside the LLM. Use the LLM only to:  
-    Interpret user intent (“back up music, but only if there’s space”).
-    Read sensor data (disk usage, library index) that you pre‑format as simple text.
-    Output a recommended action in a strict JSON format.
+   Interpret user intent (“back up music, but only if there’s space”).  
+   Read sensor data (disk usage, library index) that you pre‑format as simple text.  
+   Output a recommended action in a strict JSON format.  
   
 Your external script then applies the actual if‑then logic.  
 Example RAG document for hybrid reasoning  
@@ -613,12 +614,12 @@ task – small models excel at this.
 If you give the LLM a file like disk_usage.log or music_library_index.txt and ask it to  
 compare values, two things happen:  
 Good:  
-    The LLM can extract numbers if you format them cleanly (e.g., free_space=5.2G).
-    It can answer “is free space less than library size?” if both numbers are in the same units.
+   The LLM can extract numbers if you format them cleanly (e.g., free_space=5.2G).  
+   It can answer “is free space less than library size?” if both numbers are in the same units.  
 Bad:  
-    Small models struggle with multi‑step arithmetic or unit conversion (e.g., “12300 MB vs 5.2 GB”).
-    They may misread a log file with irregular spacing or timestamps.
-    They cannot execute the script – they only read its output as text.
+   Small models struggle with multi‑step arithmetic or unit conversion (e.g., “12300 MB vs 5.2 GB”).  
+   They may misread a log file with irregular spacing or timestamps.  
+   They cannot execute the script – they only read its output as text.  
 Recommended pattern:  
 Do not let the LLM read raw log files. Instead, have your external script parse those logs and  
 produce a single line of structured text that you inject into the RAG context:  
@@ -631,25 +632,25 @@ produce a single line of structured text that you inject into the RAG context:
 - Condition: free space (5.0 GB) is less than library size (12.3 GB) → NOT ENOUGH SPACE  
   
 Then ask the LLM a closed‑form question:  
-    “Based on the status above, should we run the full music backup? Answer only ‘yes’,  
-    ‘no’, or ‘partial’.”
+   “Based on the status above, should we run the full music backup? Answer only ‘yes’,  
+   ‘no’, or ‘partial’.”  
   
 That turns a complex reasoning problem into a three‑class classification – which a 3.8B model  
 can do with near‑perfect accuracy.  
    
 🧪 Practical test for your Cyberdeck  
-    Write a sensor script (bash or Python) that checks:  
-        Backup mount status (mountpoint or ping)
-        Disk usage (df -h /backup | awk ...)
-        Music library size (du -sb /home/ibo/music)
-    Format output as JSON or key‑value pairs.
-    Create a RAG prompt that includes:
-        The rule table (as shown above)
-        The current sensor readings
-        The user’s request
-    Run the LLM – it will output a safe decision.
-    Your wrapper script then executes the corresponding action (or queues a retry, or sends
-    a notification).
+   Write a sensor script (bash or Python) that checks:  
+       - Backup mount status (mountpoint or ping)  
+       - Disk usage (df -h /backup | awk ...)  
+       - Music library size (du -sb /home/ibo/music)  
+   Format output as JSON or key‑value pairs.  
+   Create a RAG prompt that includes:  
+       - The rule table (as shown above)  
+       - The current sensor readings  
+       - The user’s request  
+   Run the LLM – it will output a safe decision.  
+   Your wrapper script then executes the corresponding action (or queues a retry, or sends  
+   a notification).  
   
 ⚠️ Important limitation  
 A small LLM cannot maintain state across multiple invocations. If you ask “back up music  
@@ -660,9 +661,9 @@ Final answer
 Yes, you can combine rule‑based and LLM reasoning – but the LLM should act as a classifier  
 and natural language interface, not as the executor of conditional logic.  
   
-    Do: Use the LLM to map “user request + current sensor readings” to a predefined action 
-    category.
-    Do not: Ask the LLM to evaluate if (a > b and c != d) or e directly.
+   Do: Use the LLM to map “user request + current sensor readings” to a predefined action  
+   category.  
+   Do not: Ask the LLM to evaluate if (a > b and c != d) or e directly.  
   
 For your Cyberdeck, the architecture would be:  
 User command → LLM (with RAG rules + sensor data) → decision JSON → shell wrapper that  
@@ -720,11 +721,11 @@ Here’s why:
 1. No working memory across reasoning steps  
   
 The LLM has a fixed context window. When you ask it to:  
-    “Check if files fit” → then “if not, find another location” → then “copy” → then 
-    “log to database”
-    …it must hold all intermediate conclusions in its activations, not in persistent memory. 
-    A small model will forget or contradict itself after 3–4 reasoning steps.
-
+   “Check if files fit” → then “if not, find another location” → then “copy” → then   
+   “log to database”  
+   …it must hold all intermediate conclusions in its activations, not in persistent memory.   
+   A small model will forget or contradict itself after 3–4 reasoning steps.  
+  
 2. It cannot reliably compare numerical values across multiple nodes  
 Even if you give it:  
   
@@ -736,11 +737,11 @@ appears first, or hallucinate a third node.
    
 3. It cannot maintain “what has already been done”  
 If the plan involves:  
-    Copy files from A to B
-    Then delete from A after successful copy
-    Then update database
-    …the LLM has no way to know that step 2 succeeded unless you feed back the result. It will 
-    happily generate the rm command even if the copy failed.
+   Copy files from A to B  
+   Then delete from A after successful copy  
+   Then update database  
+   …the LLM has no way to know that step 2 succeeded unless you feed back the result. It will   
+   happily generate the rm command even if the copy failed.  
   
 4. “Make a note in the system database” is a hallucination magnet
 The LLM will invent a command like echo "moved files" >> /var/log/music.log – but it won’t know  
@@ -789,10 +790,10 @@ LLM OUTPUT (reliable):
 That is classification + template selection – small models excel at this.  
   
 The external script then:  
-    Checks if node3 actually has space (double‑check)
-    Runs rsync
-    Logs the action to a real database
-    Updates the snapshot for next query
+   Checks if node3 actually has space (double‑check)  
+   Runs rsync  
+   Logs the action to a real database  
+   Updates the snapshot for next query  
   
 🔁 What about “the LLM being the hardware”?  
 That metaphor fails because hardware has deterministic state (registers, memory cells).  
@@ -813,8 +814,8 @@ Execute rsync                                      ❌ Should never execute     
 Update a database after success                    ❌ Will invent wrong syntax  ✅ Perfect  
   
 So the correct split:  
-    LLM: natural language → intent + parameter extraction
-    External scripts: all conditional logic, arithmetic, state tracking, execution
+   LLM: natural language → intent + parameter extraction  
+   External scripts: all conditional logic, arithmetic, state tracking, execution  
   
 You can RAG the hardware snapshot into the LLM so it knows what exists, but the actual  
 “if this then that” decisions must be made by deterministic code.  
@@ -859,8 +860,8 @@ How it works:
 
     { "intent": "backup_music", "confidence": 0.95 }
 
-    (You can also extract parameters like source_path or target_node, but only as slot filling, 
-    not command generation.)
+   (You can also extract parameters like source_path or target_node, but only as slot filling,  
+   not command generation.)  
 
     Wrapper script:
 
@@ -868,126 +869,126 @@ How it works:
         subprocess.run(["/usr/local/bin/backup_music.sh"])
     elif intent == "check_disk_space":
         subprocess.run(["/usr/local/bin/check_space.sh"])
-
-The LLM never sees the actual commands. It only chooses from a fixed set of intent labels that 
-you define in the RAG document. This is classification, not generation – small models are extremely 
-good at this.
-
-Why this eliminates hallucinations:
-    No command syntax to invent.
-    No path to hallucinate.
-    No conditional logic inside the LLM.
-    The script handles all if‑then‑else, error checking, and logging.
   
-✅ Yes – a larger LLM can present conclusions after reasoning over log files
-Once you have logs (from your scripts, system sensors, or the small LLM’s intent calls), a larger 
-model (e.g., 7B–13B) can do genuine reasoning:
-    “Why did the backup fail at 02:34?”
-    “Which node had the most out‑of‑memory errors this week?”
-    “Summarise all rsync errors from the last 3 days and suggest fixes.”
-
-Larger models have enough internal capacity to:
-    Follow multi‑step reasoning chains.
-    Compare timestamps, error codes, and free text.
-    Ignore irrelevant log noise.
-
-But crucially, they should still not execute commands – only read logs and output analysis 
-(JSON or plain text) for a human or another deterministic script to act upon.
- 
-🔁 The complete hybrid system for your Cyberdeck
-
-User (voice/text)
+The LLM never sees the actual commands. It only chooses from a fixed set of intent labels that   
+you define in the RAG document. This is classification, not generation – small models are extremely   
+good at this.  
+  
+Why this eliminates hallucinations:  
+   No command syntax to invent.  
+   No path to hallucinate.  
+   No conditional logic inside the LLM.  
+   The script handles all if‑then‑else, error checking, and logging.  
+   
+✅ Yes – a larger LLM can present conclusions after reasoning over log files  
+Once you have logs (from your scripts, system sensors, or the small LLM’s intent calls), a larger  
+model (e.g., 7B–13B) can do genuine reasoning:  
+   “Why did the backup fail at 02:34?”  
+   “Which node had the most out‑of‑memory errors this week?”  
+   “Summarise all rsync errors from the last 3 days and suggest fixes.”  
+  
+Larger models have enough internal capacity to:  
+   Follow multi‑step reasoning chains.  
+   Compare timestamps, error codes, and free text.  
+   Ignore irrelevant log noise.  
+  
+But crucially, they should still not execute commands – only read logs and output analysis   
+(JSON or plain text) for a human or another deterministic script to act upon.  
+   
+🔁 The complete hybrid system for your Cyberdeck  
+  
+User (voice/text)  
     ↓
-[Small LLM, 3.8B] → intent classification + slot filling
+[Small LLM, 3.8B] → intent classification + slot filling  
     ↓
-[Wrapper script] → maps intent to fixed script, runs it, captures stdout/stderr
+[Wrapper script] → maps intent to fixed script, runs it, captures stdout/stderr  
     ↓
-[Logs + system state]
+[Logs + system state]  
     ↓
-[Larger LLM, 7B+] (on demand) → reads logs, answers “why”, suggests improvements
-    ↓
-Human or automated fix (e.g., tune the fixed script)
-
-🧪 Minimal working example
-RAG document for small LLM (only intents, no commands):
-
-You classify user requests into one of these intents:
-- backup_music
-- check_backup_space
-- show_last_backup_log
-
-Output JSON: {"intent": "<one of the above>"}
-
-Wrapper script (pseudo):
-
-
-intent=$(ollama run phi3.5 "$user_query" | jq -r .intent)
-case $intent in
-  backup_music) /opt/scripts/backup_music.sh ;;
-  check_backup_space) df -h /backup ;;
-  show_last_backup_log) tail -20 /var/log/backup.log ;;
-esac
-
-No hallucination possible – the LLM cannot produce rm -rf or an invalid path.
-
-Final answer
-    Small LLM: Use as a natural language to intent mapper that triggers fixed scripts 
-    – safe, reliable, hallucination‑free.
-    Larger LLM: Use offline to reason over logs and produce insights – but never let it 
-    execute anything.
-    Never let any LLM generate shell commands or conditional logic that runs unattended.
-
-This gives you the best of both worlds: natural language flexibility + deterministic safety.
-{ "intent": "backup_music", "confidence": 0.95 } If I create a script system that catches 
-that output I can build an automated system. So, backup_music than would trigger a kernel 
-subprocess with that name that triggers a series of connected scripts such as 
-disk_space_analytics and music_files_copy command. Then the LLM also could tell me based on 
-how much disk space do I have reading from disk_space_analytics or triggering that script.
-
-Then I need first a set of scripts I want to trigger by the LLM.
-We need to respond to the user's latest message. They've understood the concept: using LLM 
-to output intent like {"intent": "backup_music", "confidence": 0.95} which triggers a kernel 
-subprocess that runs a series of connected scripts (disk_space_analytics, music_files_copy). 
-They also want LLM to answer questions like "how much disk space do I have?" by reading from 
-disk_space_analytics or triggering that script. Then they realize they need a set of scripts 
-to trigger.
-
-The user is asking for confirmation/guidance on this approach. The assistant should affirm the 
-approach, then provide a practical framework: how to design the script set, how the LLM can 
-also query state (e.g., "how much disk space") by either reading cached output or triggering 
-scripts on demand. Also caution about security/loops. Provide example of script registry, and 
-how to handle both action intents and query intents.
-
-Response should be concise, practical, and encouraging.
-
-You’ve got it exactly right. Let me confirm and then give you a practical blueprint.
- 
-✅ Yes – this works and is safe
-The LLM outputs a simple intent label. Your wrapper script:
-    Receives {"intent": "backup_music", "confidence": 0.95}
-    Calls a kernel subprocess (or just a system command) that runs a pre‑defined script.
-    That script can chain other scripts (disk_space_analytics, music_files_copy, etc.) using 
-    normal shell logic (conditionals, loops, error handling).
-
-The LLM never sees the chain. It just triggers the entry point.
- 
-📋 What about “how much disk space do I have?”
-You have two clean options:
-Option A: LLM triggers a script that prints the answer
-    Intent: query_disk_space
-    Script: df -h /backup (or a custom script that parses and formats nicely)
-    LLM receives the output and can rephrase it naturally: “You have 12 GB free on the 
-    backup drive.”
-
-Option B: A separate state‑reading script runs periodically (cron) and caches results
-    Every 5 minutes: disk_space_analytics writes to /tmp/disk_state.json
-    When user asks “how much space?”, the LLM intent is get_cached_disk_space
-    Wrapper reads the JSON and returns it to the LLM for natural language output.
-
-Option A is simpler to start. Option B reduces latency and avoids running df on every query.
- 
-🧱 Building your script set
-Start with these core scripts (each does one thing, can be composed):
+[Larger LLM, 7B+] (on demand) → reads logs, answers “why”, suggests improvements  
+    ↓   
+Human or automated fix (e.g., tune the fixed script)  
+  
+🧪 Minimal working example  
+RAG document for small LLM (only intents, no commands):  
+  
+You classify user requests into one of these intents:  
+- backup_music  
+- check_backup_space  
+- show_last_backup_log  
+  
+Output JSON: {"intent": "<one of the above>"}  
+  
+Wrapper script (pseudo):  
+   
+  
+intent=$(ollama run phi3.5 "$user_query" | jq -r .intent)  
+case $intent in  
+  backup_music) /opt/scripts/backup_music.sh ;;  
+  check_backup_space) df -h /backup ;;  
+  show_last_backup_log) tail -20 /var/log/backup.log ;;  
+esac  
+  
+No hallucination possible – the LLM cannot produce rm -rf or an invalid path.  
+  
+Final answer  
+   Small LLM: Use as a natural language to intent mapper that triggers fixed scripts   
+   – safe, reliable, hallucination‑free.  
+   Larger LLM: Use offline to reason over logs and produce insights – but never let it   
+   execute anything.  
+   Never let any LLM generate shell commands or conditional logic that runs unattended.  
+  
+This gives you the best of both worlds: natural language flexibility + deterministic safety.  
+{ "intent": "backup_music", "confidence": 0.95 } If I create a script system that catches   
+that output I can build an automated system. So, backup_music than would trigger a kernel   
+subprocess with that name that triggers a series of connected scripts such as   
+disk_space_analytics and music_files_copy command. Then the LLM also could tell me based on  
+how much disk space do I have reading from disk_space_analytics or triggering that script.  
+  
+Then I need first a set of scripts I want to trigger by the LLM.  
+We need to respond to the user's latest message. They've understood the concept: using LLM   
+to output intent like {"intent": "backup_music", "confidence": 0.95} which triggers a kernel   
+subprocess that runs a series of connected scripts (disk_space_analytics, music_files_copy).   
+They also want LLM to answer questions like "how much disk space do I have?" by reading from   
+disk_space_analytics or triggering that script. Then they realize they need a set of scripts   
+to trigger.  
+  
+The user is asking for confirmation/guidance on this approach. The assistant should affirm the   
+approach, then provide a practical framework: how to design the script set, how the LLM can   
+also query state (e.g., "how much disk space") by either reading cached output or triggering   
+scripts on demand. Also caution about security/loops. Provide example of script registry, and   
+how to handle both action intents and query intents.  
+  
+Response should be concise, practical, and encouraging.  
+  
+You’ve got it exactly right. Let me confirm and then give you a practical blueprint.  
+   
+✅ Yes – this works and is safe  
+The LLM outputs a simple intent label. Your wrapper script:  
+   Receives {"intent": "backup_music", "confidence": 0.95}  
+   Calls a kernel subprocess (or just a system command) that runs a pre‑defined script.  
+   That script can chain other scripts (disk_space_analytics, music_files_copy, etc.) using   
+   normal shell logic (conditionals, loops, error handling).  
+  
+The LLM never sees the chain. It just triggers the entry point.  
+   
+📋 What about “how much disk space do I have?”  
+You have two clean options:  
+Option A: LLM triggers a script that prints the answer  
+   Intent: query_disk_space  
+   Script: df -h /backup (or a custom script that parses and formats nicely)  
+   LLM receives the output and can rephrase it naturally: “You have 12 GB free on the   
+   backup drive.”  
+  
+Option B: A separate state‑reading script runs periodically (cron) and caches results  
+   Every 5 minutes: disk_space_analytics writes to /tmp/disk_state.json  
+   When user asks “how much space?”, the LLM intent is get_cached_disk_space  
+   Wrapper reads the JSON and returns it to the LLM for natural language output.  
+  
+Option A is simpler to start. Option B reduces latency and avoids running df on every query.  
+  
+🧱 Building your script set  
+Start with these core scripts (each does one thing, can be composed):  
 Script name                   Function    
                               Output format
 check_disk_space.sh           Queries free space on backup target    
@@ -999,74 +1000,74 @@ backup_music.sh               Calls scan_music_files, checks space, runs rsync, 
 notify.sh                     Sends a desktop/terminal notification    
                               -
 get_last_backup_log.sh        Prints last 20 lines of backup log    
-                              Plain text
-
-Then define your intent → script mapping in a simple config file (JSON or YAML):
-json
-
-{
-  "backup_music": "/opt/cyberdeck/scripts/backup_music.sh",
-  "check_disk_space": "/opt/cyberdeck/scripts/check_disk_space.sh",
-  "how_much_space": "/opt/cyberdeck/scripts/check_disk_space.sh",   // alias
-  "show_backup_log": "/opt/cyberdeck/scripts/get_last_backup_log.sh"
-}
-
-The wrapper script:
-    Calls the LLM to get intent.
-    Looks up the script path.
-    Executes it (with optional arguments if the LLM also extracts slots like source_folder).
-    Captures stdout/stderr.
-    Optionally feeds the output back to the LLM for a friendly response.
-
-🔁 Example flow for “back up my music”
-    User: “Back up my music”
-    LLM → {"intent": "backup_music"}
-    Wrapper runs /opt/cyberdeck/scripts/backup_music.sh
-        That script internally calls check_disk_space.sh → if low space, exit with error.
-        Otherwise calls scan_music_files.sh → rsync each file.
-        Logs result to /var/log/backup.log.
-    Wrapper shows output to user (or logs it).
-
-⚠️ One caution
-Do not let the LLM trigger scripts that modify system state without a confirmation step for 
-destructive actions. For backup_music, fine. For delete_old_backups, require a second “yes” 
-from the user.
- 
-🚀 Next step
-You can start with three scripts:
-    check_disk_space
-    scan_music_files
-    backup_music
-
-Then wire them to intents. The LLM becomes your voice‑controlled script launcher – which 
-is exactly what a Cyberdeck deserves.
-
-Would you like me to write a minimal wrapper in Python or Bash that does the 
-intent → script dispatch?
- 
-Yes, please. Give me an example script for a python 3.13 env based on that very example.
- 
-We need to provide a Python script that acts as a wrapper: it takes a user query (likely 
-from command line or stdin), calls Ollama with a RAG prompt to get intent JSON, then maps 
-intent to a shell script, executes it, optionally feeds output back to LLM for natural 
-response. The user wants "an example script for a python 3.13 env based on that very 
-example" – the example being the backup_music intent mapping.
-
-We'll write a self-contained Python script that uses subprocess to call ollama run 
-(assuming ollama CLI available), parses JSON, executes script, and prints result. We'll 
-include a simple config dict for intent->script mapping. Also include error handling and 
-optionally a second LLM call to format output.
-
-We'll assume the RAG prompt is stored in a separate file or as a string. We'll keep it 
-simple but robust.
-
-We'll produce final answer with the script and brief explanation. 
- 
-Here’s a complete, working Python 3.13 script that does exactly what we described. It 
-assumes you have `ollama` installed and the `phi3.5:3.8b` model pulled.
-
-Save this as `cyberdeck_llm_wrapper.py`:
-
+                              Plain text      
+  
+Then define your intent → script mapping in a simple config file (JSON or YAML):  
+json  
+  
+{  
+  "backup_music": "/opt/cyberdeck/scripts/backup_music.sh",  
+  "check_disk_space": "/opt/cyberdeck/scripts/check_disk_space.sh",  
+  "how_much_space": "/opt/cyberdeck/scripts/check_disk_space.sh",   // alias  
+  "show_backup_log": "/opt/cyberdeck/scripts/get_last_backup_log.sh"  
+}  
+  
+The wrapper script:  
+   Calls the LLM to get intent.  
+   Looks up the script path.  
+   Executes it (with optional arguments if the LLM also extracts slots like source_folder).  
+   Captures stdout/stderr.  
+   Optionally feeds the output back to the LLM for a friendly response.  
+  
+🔁 Example flow for “back up my music”   
+   User: “Back up my music”  
+   LLM → {"intent": "backup_music"}  
+   Wrapper runs /opt/cyberdeck/scripts/backup_music.sh  
+   - That script internally calls check_disk_space.sh → if low space, exit with error.  
+   - Otherwise calls scan_music_files.sh → rsync each file.  
+   - Logs result to /var/log/backup.log.  
+   Wrapper shows output to user (or logs it).  
+  
+⚠️ One caution  
+Do not let the LLM trigger scripts that modify system state without a confirmation step for   
+destructive actions. For backup_music, fine. For delete_old_backups, require a second “yes”  
+from the user.  
+   
+🚀 Next step  
+You can start with three scripts:  
+   check_disk_space  
+   scan_music_files  
+   backup_music  
+  
+Then wire them to intents. The LLM becomes your voice‑controlled script launcher – which   
+is exactly what a Cyberdeck deserves.  
+  
+Would you like me to write a minimal wrapper in Python or Bash that does the   
+intent → script dispatch?  
+   
+Yes, please. Give me an example script for a python 3.13 env based on that very example.  
+   
+We need to provide a Python script that acts as a wrapper: it takes a user query (likely   
+from command line or stdin), calls Ollama with a RAG prompt to get intent JSON, then maps   
+intent to a shell script, executes it, optionally feeds output back to LLM for natural   
+response. The user wants "an example script for a python 3.13 env based on that very   
+example" – the example being the backup_music intent mapping.  
+  
+We'll write a self-contained Python script that uses subprocess to call ollama run   
+(assuming ollama CLI available), parses JSON, executes script, and prints result. We'll   
+include a simple config dict for intent->script mapping. Also include error handling and   
+optionally a second LLM call to format output.   
+  
+We'll assume the RAG prompt is stored in a separate file or as a string. We'll keep it   
+simple but robust.  
+  
+We'll produce final answer with the script and brief explanation.  
+  
+Here’s a complete, working Python 3.13 script that does exactly what we described. It  
+assumes you have `ollama` installed and the `phi3.5:3.8b` model pulled.  
+  
+Save this as `cyberdeck_llm_wrapper.py`:  
+  
 ```batch
 #!/usr/bin/env python3
 """
