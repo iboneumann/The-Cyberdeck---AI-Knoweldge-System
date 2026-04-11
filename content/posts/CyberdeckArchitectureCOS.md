@@ -1,10 +1,17 @@
 +++
 date = '2026-04-11T11:41:36+02:00'
 draft = false
-title = 'CyberdeckArchitectureCOS'
+title = 'Cyberdeck as Architecture CIOS'
 weight = 38
 +++
-
+  
+Collective Intelligence Operating Sytem  
+  
+Imagine you come into your office reading about what issues your desktop workers had the previous day  
+and find a list of suggestions how to fix them by automated tasks performed by scripts.  
+  
+This here is the reasoning process how this Cyberdeck as Architecture can do that:  
+  
 I see the need for local large LLMs and I am sure that the SIXUNITED is the only logic choice with no   
 chance of IBM compatible hardware meeting the performance, but the more efficient future for LLM use   
 focusing on its reasoning capabiliy is less the hyped AGI but dedicated systems that work based on   
