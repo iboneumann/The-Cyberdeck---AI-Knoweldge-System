@@ -1,4 +1,12 @@
+# Cyberdeck AI Knowledge System
+
+Your data, your hardware, your AI.  
+Most "private AI" tools still leak data to the cloud. This project proves otherwise: it turns cheap hardware into a private, offline, secure AI knowledge system using a Beowulf cluster, local LLMs (Ollama), RAG, and Obsidian – all under Apache 2.0
+
+👉 **Obsidian Deck** works today. **Nexus** (RAG + security) is finishing. **Cortex** (full LLM power) is next.
+
 The entire content: https://cyberdeck-ai-knowledge-system.org/
+
 
 Introduction to Ollama AI Computing
 
