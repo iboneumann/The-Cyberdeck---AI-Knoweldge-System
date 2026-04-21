@@ -5,7 +5,7 @@ title = 'Cyberdeck as Architecture CIOS'
 weight = 38
 +++
   
-Collective Intelligence Operating Sytem  
+Collective Intelligence Operating System  
   
 Imagine you come into your office reading about what issues your desktop workers had the previous day  
 and find a list of suggestions how to fix them by automated tasks performed by scripts.  
@@ -365,7 +365,7 @@ This is where your architecture shines. BRA tasks are embarrassingly parallel ba
 what Beowulf/MPICH was designed for.  
 The Data: End-of-day chat logs (JSONL files) scattered across /home/mpiuser/logs/ on 20 desks.  
 The MPICH Script:
-   # This runs the BRA analysis script on ALL nodes simultaneously, each processing its own local  
+   This runs the BRA analysis script on ALL nodes simultaneously, each processing its own local  
    log file.  
    mpirun -hostfile /etc/hosts.beowulf -np 20 /usr/local/bin/analyze_chat_log.py  
   
