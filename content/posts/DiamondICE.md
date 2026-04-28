@@ -38,11 +38,10 @@ Cyberdeck.
    precautions (like a reverse proxy, rate limiting, and regular vulnerability scans) are essential.   
    Always keep your tools and systems updated.  
     
+   UFW - Universal Fire Wall 
    RKHunter - Rootkit detector   
    ClamAV - Antivirus  
    Automatic Security Updates (set and forget)  
-   sudo apt install unattended-upgrades apt-listchanges -y  
-   sudo dpkg-reconfigure --priority=low unattended-upgrades  # Choose "Yes"  
    Logwatch - Daily security summary emails  
    PSAD (Port Scan Attack Detector)  
   
