@@ -18,7 +18,7 @@ the Open Source community. While others started to build pipelines to the large 
 models being suitable for data analytics are still rare as much as real Cyberdecks.  
   
 Cyberdecks are part of the dystopian Sci-Fi world and portable super computers used by Deckers that enter the Matrix on their Shadowrun   
-called adventures.  
+called adventures. The real world Cyberdeck builds up on this...Appyled Knowledge Management explained in [this short book](https://www.amazon.com/-/en/Ibo-Neumann-ebook/dp/B096SGNGL9/ref=sr_1_3?dib=eyJ2IjoiMSJ9.PCjtx9g3ibp-NMPkCI_UVQ.SO7b2WW0Dou-faXD8jEq3h-y7uu38M2sqoQ0ifPB9pY&dib_tag=se&qid=1791069435&refinements=p_27%3AIbo+Neumann&s=digital-text&sr=1-3&text=Ibo+Neumann#detailBullets_feature_div).  
   
 The closest to that is a high-end laptop or a Beowulf Cluster. Beowulf Clusters are supercomputers based on standard hardware like  
 standard office computers and LAN hubs. Using MPICH and Linux operating systems on each node called part of the network that forms  
