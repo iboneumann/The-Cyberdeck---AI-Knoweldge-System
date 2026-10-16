@@ -1,6 +1,6 @@
 +++
 date = '2026-10-16T04:33:57+02:00'
-draft = true
+draft = false
 title = 'Cyberdeck Architecture - A LLM language-2nd'
 weight = 43
 +++
