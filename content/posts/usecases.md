@@ -29,12 +29,12 @@ Created using DeepSeek.\
 \
 \
 Incorporated with DeepSeek\
-\
-### Corporate Intra & Internet Web presence
 
-# CORTEX — A Shadowrun Noir
+# Corporate Intra & Internet Web presence
 
-## 1. Rain on the LAN
+## CORTEX — A Shadowrun Noir
+
+### 1. Rain on the LAN
 
 The rain in Lisbon doesn’t fall. It negotiates.\
 \
@@ -47,8 +47,8 @@ Not a toy deck. Not a Raspberry Pi in a lunchbox. The real thing: a rack of refu
 of Navegante Global’s Lisbon HQ, behind a door with a biometric lock and a sign that says **AUTHORIZED PERSONNEL ONLY**. The sign is a lie. Everyone on the\ floor knows what we do. They just don’t know how much of the company runs through it.\
 \
 They call it the Cyberdeck. The board calls it CORTEX. I call it the thing that keeps me awake.\
-\
-## 2. The CV of a man who builds decks
+
+### 2. The CV of a man who builds decks
 
 You want to know what kind of résumé it takes to build a system like this. Here it is, the short version.\
 \
@@ -73,7 +73,7 @@ a nice way of saying “too expensive, too old.” So I built the first Cyberdec
 **Certifications:** LPIC-2, ITIL v3 (expired), ISO 27001 Lead Implementer. My AWS cert lapsed. I never renewed it. The cloud is just someone else’s computer,\
 and I prefer mine.\
 \
-## 3. What CORTEX actually is
+### 3. What CORTEX actually is
 
 Navegante Global is a logistics and retail conglomerate. Lisbon HQ, operations in Macau, São Paulo, and Luanda. Internal intranet for 12,000 employees.\ External sites for forty brands. Product catalogs, HR portals, compliance pages, investor relations, a thousand landing pages that someone’s cousin designed\ in 2019 and nobody has touched since.\
 \
@@ -90,8 +90,8 @@ silo. Chroma for the vector store. An Obsidian vault as the human-readable knowl
 **The silos:** Lisbon is primary. Macau, São Paulo, and Luanda are mirrors with local Cortex nodes—smaller decks, same architecture. Encrypted WireGuard\ tunnels. Nightly PostgreSQL logical replication. CRDT-based document sync for the knowledge base. When a user in Macau asks a question, the local node\ answers first; if it can’t, it federates the query to Lisbon. The system is designed to be transcontinental. It is also designed to be *observable*. Every\ agent action is logged. Every log is hashed. Every hash is replicated. That was my idea. I thought it would make us safe.\
 \
  Incorporated with DeepSeek\
- \
- ### Facility Maintenance and Security
+
+# Facility Maintenance and Security
 
  **The Night Round**\
 \
@@ -299,7 +299,7 @@ Lisbon, Portugal  \
 \
 Incorporated with DeepSeek\
 \
-### The SmartCam & Trip Planning
+# The SmartCam & Trip Planning
 
 # Annotated City
 
@@ -374,7 +374,7 @@ The next morning, it rained. I ate the fry. The deck pinged before I reached the
 \
 *Belfast Confetti,* it said. *Bring a coat.*\
 \
-### Help Desk Nights
+# Help Desk Nights
 
 Incorporated with DeepSeek\
 \
@@ -552,8 +552,8 @@ Declan was not. But he would be. \
 \
  (Incorporated with DeepSeek)\
 \
-### Banking
-# The Salmon Weir
+# Banking
+### The Salmon Weir
 
 The rain came off the Liffey sideways, the way it does when the river has decided it owns the city and the sky is just agreeing with it. Six floors up in Lir\ 
 House, the IFSC behind me lit up like a spreadsheet of sins, and Mingus was on the deck telling me about the Black Saint and the Sinner Lady, which is the\ kind of thing a man puts on when he wants to be left alone with his work and his conscience and a bottle of something that isn't quite whiskey.\
