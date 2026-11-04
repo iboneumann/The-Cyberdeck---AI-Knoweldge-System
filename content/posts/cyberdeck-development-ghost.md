@@ -5,7 +5,9 @@ draft: false
 weight: 49
 +++
 tags: ["cyberdeck", "deepseek-harness", "python", "textual", "agentic-coding"]  
+
 categories: ["Engineering"]  
+
 summary: "How a four-pane terminal, a headless AI harness, and a stubborn refusal to trust the agent's own report turned copy-paste coding into a verified loop."  
 
 

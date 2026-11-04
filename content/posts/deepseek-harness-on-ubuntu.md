@@ -5,7 +5,9 @@ draft: false
 weight: 50
 +++
 tags: ["deepseek-harness", "ubuntu", "nodejs", "tooling"]  
+
 categories: ["Engineering"]  
+
 summary: "A field report on running dsh headless on Ubuntu 22.04 and 24.04: supported versions, the pnpm build-script trap, and how to isolate a development profile from a production one."  
 
 
