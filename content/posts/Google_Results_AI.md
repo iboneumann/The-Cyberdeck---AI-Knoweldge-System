@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-23T21:08:02+02:00'
 draft = false
 title = "Google Results AI"

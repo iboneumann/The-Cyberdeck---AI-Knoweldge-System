@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-23T13:20:08+02:00'
 draft = false
 title = "Definition by a RAGed AI"

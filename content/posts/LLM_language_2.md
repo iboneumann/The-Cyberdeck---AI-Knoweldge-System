@@ -1,4 +1,4 @@
-+++
+---
 date = '2026-07-26T19:36:29+02:00'
 draft = false
 title = 'Cyberdeck Architecture - A LLM language-2nd'

@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-23T19:02:46+02:00'
 draft = false
 title = "Obsidian Deck .md file"

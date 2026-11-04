@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-12-25T19:32:50+01:00'
 draft = false
 title = 'Ollama Cluster first success'

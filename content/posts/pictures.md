@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-23T22:18:00+02:00'
 draft = false
 title = 'Pictures'

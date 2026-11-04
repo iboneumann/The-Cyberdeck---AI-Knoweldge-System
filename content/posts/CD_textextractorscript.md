@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-25T08:43:04+02:00'
 draft = false
 title = "The textextractor.py script"

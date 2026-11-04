@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-27T22:10:06+01:00'
 draft = false
 title = "Single Vs Serial designe"

@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-31T17:09:57Z'
 draft = false
 title = "The Cyberdeck Nexus Version"

@@ -1,4 +1,4 @@
-+++
+---
 date = '2026-11-04'
 title = 'DeepSeek Harness on Ubuntu Server LTS: What Works and What Bites'
 draft = false

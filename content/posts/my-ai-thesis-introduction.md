@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-22T13:18:08+02:00'
 draft = false
 title = 'My AI Thesis Introduction'

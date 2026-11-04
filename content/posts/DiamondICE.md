@@ -1,4 +1,4 @@
-+++
+---
 date = '2026-04-08T15:38:43+02:00'
 draft = false
 title = 'Diamond ICE'

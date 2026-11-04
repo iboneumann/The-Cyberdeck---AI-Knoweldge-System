@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-12-22T21:42:42+01:00'
 draft = false
 title = 'Leaving ChromaDB'

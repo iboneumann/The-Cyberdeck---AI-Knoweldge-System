@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-27T09:17:45+01:00'
 draft = false
 title = 'Folder structures'

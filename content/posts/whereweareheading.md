@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-11-06T15:52:57Z'
 draft = false
 title = "Where we are heading"

@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-30T09:08:43Z'
 draft = false
 title = 'Licence'

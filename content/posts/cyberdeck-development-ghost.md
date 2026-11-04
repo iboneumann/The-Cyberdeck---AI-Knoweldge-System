@@ -1,4 +1,4 @@
-+++
+---
 date = '2026-11-04'
 title = 'Building a Development Ghost: A Four-Pane Terminal That Fixes Its Own Scripts'
 draft = false

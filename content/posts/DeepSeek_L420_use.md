@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-27T18:40:39+01:00'
 draft = false
 title = "DeepSeek use - Node Design"

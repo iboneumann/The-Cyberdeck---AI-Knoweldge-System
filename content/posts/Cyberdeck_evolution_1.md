@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-25T08:01:35+02:00'
 draft = false
 title = "Cyberdeck evolution"

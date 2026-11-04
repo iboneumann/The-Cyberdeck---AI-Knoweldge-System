@@ -1,4 +1,4 @@
-+++
+---
 title: "Commands"
 date = '2026-11-04'
 draft = false

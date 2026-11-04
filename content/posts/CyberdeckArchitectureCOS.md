@@ -1,4 +1,4 @@
-+++
+---
 date = '2026-04-11T11:41:36+02:00'
 draft = false
 title = 'Cyberdeck as Architecture CIOS'

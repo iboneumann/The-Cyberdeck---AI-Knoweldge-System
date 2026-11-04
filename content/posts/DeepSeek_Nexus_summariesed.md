@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-11-01T12:59:27Z'
 draft = false
 title = "DeepSeek on Nexus summarized"

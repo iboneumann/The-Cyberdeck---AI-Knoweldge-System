@@ -1,4 +1,4 @@
-+++
+---
 date = '2025-10-23T18:34:29+02:00'
 draft = false
 title = "About Deck & Parser Script"
