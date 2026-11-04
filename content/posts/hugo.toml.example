@@ -1,0 +1,37 @@
+# Merge these blocks into your existing hugo.toml (or config/_default/hugo.toml).
+# Do not replace your whole config — take only what you need.
+
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Your Site"
+
+# Needed so /docs/ pages appear in the main section list on some themes
+[params]
+  mainSections = ["posts", "docs"]
+  description = "Notes on local-first AI tooling and the Cyberdeck project"
+
+# Syntax highlighting for the published source code
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+    tabWidth = 4
+
+  [markup.goldmark.renderer]
+    # The docs use raw <div class="cyberdeck"> wrappers; allow them through
+    unsafe = true
+
+# Ordered docs section
+[[menu.main]]
+  name = "Docs"
+  pageRef = "/docs"
+  weight = 20
+
+[[menu.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 10
+
+# If you use PaperMod or Blowfish, their own params go here; leave them untouched.
