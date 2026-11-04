@@ -1,5 +1,5 @@
----
-date = '2025-11-06T23:24:22Z'
++++
+date = "2025-11-06T23:24:22Z"
 draft = false
 title = "The Nexus Cortex Version"
 weight = 29

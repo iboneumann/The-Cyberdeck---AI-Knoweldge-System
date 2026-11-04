@@ -1,7 +1,7 @@
----
-date = '2026-04-21T16:35:57+02:00'
++++
+date = "2026-04-21T16:35:57+02:00"
 draft = false
-title = 'Cyberdeck Architecture CIOS-FreeBSD-C'
+title = "Cyberdeck Architecture CIOS-FreeBSD-C"
 weight = 39
 +++
 

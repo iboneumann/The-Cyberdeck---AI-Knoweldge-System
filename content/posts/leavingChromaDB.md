@@ -1,7 +1,7 @@
----
-date = '2025-12-22T21:42:42+01:00'
++++
+date = "2025-12-22T21:42:42+01:00"
 draft = false
-title = 'Leaving ChromaDB'
+title = "Leaving ChromaDB"
 weight = 32
 +++
 

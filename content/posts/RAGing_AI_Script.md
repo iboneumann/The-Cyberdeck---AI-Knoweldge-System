@@ -1,5 +1,5 @@
----
-date = '2025-10-23T22:12:39+02:00'
++++
+date = "2025-10-23T22:12:39+02:00"
 draft = false
 title = "The AI RAGing Script"
 weight = 10

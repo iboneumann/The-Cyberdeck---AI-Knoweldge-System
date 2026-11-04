@@ -1,9 +1,10 @@
----
-date = '2026-05-26T16:09:45+02:00'
++++
+date = "2026-05-26T16:09:45+02:00"
 draft = false
-title = 'Cyberdeck as Architecture Cybderdeck Mesh'
+title = "Cyberdeck as Architecture Cybderdeck Mesh"
 weight = 40
 +++
+
 A Mesh Network of Cybderdeck AI Knowledge Systems  
 The Cyberdeck Mesh version  
   

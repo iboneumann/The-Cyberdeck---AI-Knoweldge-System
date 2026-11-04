@@ -1,7 +1,7 @@
----
-date = '2025-10-23T22:18:00+02:00'
++++
+date = "2025-10-23T22:18:00+02:00"
 draft = false
-title = 'Pictures'
+title = "Pictures"
 weight = 11
 +++
 
@@ -13,4 +13,3 @@ The RAGing Script in action - Ollama llama Long Chain
 
 The RAGing Script in action - Ollama llama Long Chain 2
 ![The RAGing Script in action - Ollama llama Long Chain](/images/RAGingscript2.png)
-

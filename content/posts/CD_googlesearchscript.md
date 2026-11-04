@@ -1,5 +1,5 @@
----
-date = '2025-10-25T08:42:47+02:00'
++++
+date = "2025-10-25T08:42:47+02:00"
 draft = false
 title = "Ggooglesearch.py script"
 weight = 15

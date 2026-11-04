@@ -1,7 +1,7 @@
----
-date = '2025-12-20T12:11:51+01:00'
++++
+date = "2025-12-20T12:11:51+01:00"
 draft = false
-title = 'Dockerrized RAG Cluster'
+title = "Dockerrized RAG Cluster"
 weight = 31
 +++
 

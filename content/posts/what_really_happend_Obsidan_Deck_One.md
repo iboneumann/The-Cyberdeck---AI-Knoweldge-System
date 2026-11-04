@@ -1,5 +1,5 @@
----
-date = '2025-10-23T17:44:13+02:00'
++++
+date = "2025-10-23T17:44:13+02:00"
 draft = false
 title = "Obsidian Deck reality"
 weight = 4

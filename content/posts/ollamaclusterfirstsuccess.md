@@ -1,9 +1,10 @@
----
-date = '2025-12-25T19:32:50+01:00'
++++
+date = "2025-12-25T19:32:50+01:00"
 draft = false
-title = 'Ollama Cluster first success'
+title = "Ollama Cluster first success"
 weight = 33
 +++
+
   
 Using two ports at the HAProxy server I have managed to now run two raging scripts in parallel next to each other using the same set of 6 nodes all  
 having a single Ollama instance running.   

@@ -1,7 +1,7 @@
----
-date = '2026-04-02T14:08:25+02:00'
++++
+date = "2026-04-02T14:08:25+02:00"
 draft = false
-title = 'Cyberdeck as Architecture - AI Ghosts'
+title = "Cyberdeck as Architecture - AI Ghosts"
 weight = 35
 +++
 
@@ -1278,5 +1278,3 @@ The LLM never generates a command. All scripts are on your filesystem, reviewed 
 Even if the LLM hallucinates an intent, the wrapper only runs trusted scripts. Perfect for  
 your Cyberdeck.   
   
-
-

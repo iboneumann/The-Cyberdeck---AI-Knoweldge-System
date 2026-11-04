@@ -1,7 +1,7 @@
----
-date = '2026-07-26T19:19:08+02:00'
++++
+date = "2026-07-26T19:19:08+02:00"
 draft = false
-title = 'Cyberdeck Architecture - A LLM language'
+title = "Cyberdeck Architecture - A LLM language"
 weight = 41
 +++
 

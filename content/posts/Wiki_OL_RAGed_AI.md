@@ -1,5 +1,5 @@
----
-date = '2025-10-23T22:48:19+02:00'
++++
+date = "2025-10-23T22:48:19+02:00"
 draft = false
 title = "RAGed WikiOL AI"
 weight = 13

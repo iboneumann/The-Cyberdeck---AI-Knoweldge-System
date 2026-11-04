@@ -1,7 +1,7 @@
----
-date = '2026-03-30T14:00:48+02:00'
++++
+date = "2026-03-30T14:00:48+02:00"
 draft = false
-title = 'Reorientation'
+title = "Reorientation"
 weight = 34
 +++
 
@@ -348,4 +348,3 @@ balancer to learn.
 Now go wire the websearch into the loop – that’s where the magic happens.
 ```
 ![Load Balancer is functional in the first version](/images/cyberdecklbmonitorfunctional.png)
-

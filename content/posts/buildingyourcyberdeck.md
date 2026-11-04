@@ -1,9 +1,10 @@
----
-date = '2025-10-29T10:50:49Z'
++++
+date = "2025-10-29T10:50:49Z"
 draft = false
-title = 'Building your Cyberdeck'
+title = "Building your Cyberdeck"
 weight = 24
 +++
+
 Building your own Cyberdeck  
   
 The Cyberdeck is a new approach to using computers that can be applied to reusing by up-cycling old hardware to  

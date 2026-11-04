@@ -1,5 +1,5 @@
----
-date = '2025-10-27T22:10:06+01:00'
++++
+date = "2025-10-27T22:10:06+01:00"
 draft = false
 title = "Single Vs Serial designe"
 weight = 23
@@ -240,5 +240,3 @@ that's faster but potentially less deep in each specialty.
 
 Which aspect of this reasoning architecture would you like to explore further?
 ```
-
-

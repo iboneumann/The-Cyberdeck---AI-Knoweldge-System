@@ -1,8 +1,10 @@
----
-title: "Commands"
-date = '2026-11-04'
++++
+title = "Commands"
+date = 2026-11-04
 draft = false
 weight = 130
+tags = ["cyberdeck", "reference"]
+summary = "Every slash command, what it requires, and exactly what its verdict means."
 +++
 
 Commands are **typed into the chat input**, not bound to keys. This is deliberate:

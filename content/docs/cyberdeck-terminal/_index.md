@@ -1,6 +1,6 @@
----
-title = 'Cyberdeck Terminal'
-date = '2026-11-04'
++++
+title = "Cyberdeck Terminal"
+date = "2026-11-04"
 draft = false
 weight = 110
 +++

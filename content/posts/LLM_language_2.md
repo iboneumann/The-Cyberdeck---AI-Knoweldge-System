@@ -1,9 +1,10 @@
----
-date = '2026-07-26T19:36:29+02:00'
++++
+date = "2026-07-26T19:36:29+02:00"
 draft = false
-title = 'Cyberdeck Architecture - A LLM language-2nd'
+title = "Cyberdeck Architecture - A LLM language-2nd"
 weight = 42
 +++
+
 Continuing with a precise excample in the overal context. From here, after the SmartCam left its current Alpha stage, I  
 will restructure the content folders and create translated text files for RAGing.  
 The given scripts are not tested yet and also not using the Cyberdeck Loadbalancer. This is Alpha stage.  

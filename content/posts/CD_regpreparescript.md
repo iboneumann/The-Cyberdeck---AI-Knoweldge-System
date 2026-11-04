@@ -1,5 +1,5 @@
----
-date = '2025-10-25T09:03:51+02:00'
++++
+date = "2025-10-25T09:03:51+02:00"
 draft = false
 title = "The reg_prepare.py script"
 weight = 17

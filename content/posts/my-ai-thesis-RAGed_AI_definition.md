@@ -1,10 +1,9 @@
----
-date = '2025-10-23T13:20:08+02:00'
++++
+date = "2025-10-23T13:20:08+02:00"
 draft = false
 title = "Definition by a RAGed AI"
 weight = 2
 +++
-
 
 ## Asking the RAGed AI about Cyberdecks
                              

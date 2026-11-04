@@ -1,7 +1,7 @@
----
-date = '2025-10-27T14:15:20+01:00'
++++
+date = "2025-10-27T14:15:20+01:00"
 draft = false
-title = 'DeepSeek Use on Storage'
+title = "DeepSeek Use on Storage"
 weight = 20
 +++
 
@@ -379,4 +379,3 @@ I hope this gives you a clear and exciting path forward! Your Cyberdeck project 
 and this approach can make its storage incredibly powerful and intuitive. If you'd like to 
 dive deeper into a specific FUSE filesystem or have a prototype in mind, feel free to ask.
 ```
-

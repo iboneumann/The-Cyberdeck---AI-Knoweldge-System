@@ -1,9 +1,10 @@
----
-date = '2026-04-11T11:41:36+02:00'
++++
+date = "2026-04-11T11:41:36+02:00"
 draft = false
-title = 'Cyberdeck as Architecture CIOS'
+title = "Cyberdeck as Architecture CIOS"
 weight = 38
 +++
+
   
 Collective Intelligence Operating System  
   

@@ -1,5 +1,5 @@
----
-date = '2025-10-25T08:43:34+02:00'
++++
+date = "2025-10-25T08:43:34+02:00"
 draft = false
 title = "The files created"
 weight = 17

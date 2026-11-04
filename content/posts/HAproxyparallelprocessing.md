@@ -1,5 +1,5 @@
----
-date = '2025-11-18T13:01:56+01:00'
++++
+date = "2025-11-18T13:01:56+01:00"
 draft = false
 title = "HAproxy for parallelisation"
 weight = 30
@@ -147,4 +147,3 @@ marks a significant milestone in that journey.
 HAProxy in my Cyberdeck AI Knowledge System build. Follow along as we continue 
 building the future of personal knowledge management.]*
 ```
-

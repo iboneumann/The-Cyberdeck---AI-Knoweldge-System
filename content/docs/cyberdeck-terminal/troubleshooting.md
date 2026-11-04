@@ -1,11 +1,11 @@
----
-title: "Troubleshooting"
-date: 2026-11-04
-draft: false
-weight: 60
-tags: ["cyberdeck", "troubleshooting"]
-summary: "The failures that cost the most time, what they actually mean, and the fix for each."
----
++++
+title = "Troubleshooting"
+date = "2026-11-04"
+draft = false
+weight = 60
+tags = ["cyberdeck", "troubleshooting"]
+summary = "The failures that cost the most time, what they actually mean, and the fix for each."
++++
 
 Ordered by how much time they cost, not by how common they are.
 

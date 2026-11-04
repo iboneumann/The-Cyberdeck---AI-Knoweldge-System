@@ -1,9 +1,10 @@
----
-date = '2026-04-08T15:38:43+02:00'
++++
+date = "2026-04-08T15:38:43+02:00"
 draft = false
-title = 'Diamond ICE'
+title = "Diamond ICE"
 weight = 37
 +++
+
   
 A Cyberdeck in the Dystopian Sci-Fi world is nothing with out ICE. In Shadowrun, ICE stands for Intrusion   
 Countermeasures (or sometimes Intrusion Countermeasure Electronics).   

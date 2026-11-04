@@ -1,5 +1,5 @@
----
-date = '2025-10-25T08:01:35+02:00'
++++
+date = "2025-10-25T08:01:35+02:00"
 draft = false
 title = "Cyberdeck evolution"
 weight = 14
@@ -297,4 +297,3 @@ Extraction>
 
 
  
-

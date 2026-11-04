@@ -1,6 +1,6 @@
----
-title = 'Installation'
-date = '2026-11-04'
++++
+title = "Installation"
+date = "2026-11-04"
 draft = false
 weight = 120
 +++

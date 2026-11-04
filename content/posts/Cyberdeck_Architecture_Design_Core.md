@@ -1,7 +1,7 @@
----
-date = '2026-04-04T18:59:17+02:00'
++++
+date = "2026-04-04T18:59:17+02:00"
 draft = false
-title = 'Cyberdeck Architecture Design Core'
+title = "Cyberdeck Architecture Design Core"
 weight = 36
 +++
 
@@ -79,5 +79,3 @@ I will add to this system and project.
 /etc/hosts  
 IP nodeNr name  
   
-
-

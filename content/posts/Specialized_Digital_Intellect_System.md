@@ -1,5 +1,5 @@
----
-date = '2025-10-23T22:33:07+02:00'
++++
+date = "2025-10-23T22:33:07+02:00"
 draft = false
 title = "A Digital Intellect System"
 weight = 12

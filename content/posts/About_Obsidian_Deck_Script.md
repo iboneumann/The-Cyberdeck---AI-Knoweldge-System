@@ -1,5 +1,5 @@
----
-date = '2025-10-23T18:34:29+02:00'
++++
+date = "2025-10-23T18:34:29+02:00"
 draft = false
 title = "About Deck & Parser Script"
 weight = 6
@@ -429,7 +429,5 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
-
 
 
