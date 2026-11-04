@@ -4,9 +4,9 @@ title: 'Building a Development Ghost: A Four-Pane Terminal That Fixes Its Own Sc
 draft: false
 weight: 49
 +++
-tags: ["cyberdeck", "deepseek-harness", "python", "textual", "agentic-coding"]
-categories: ["Engineering"]
-summary: "How a four-pane terminal, a headless AI harness, and a stubborn refusal to trust the agent's own report turned copy-paste coding into a verified loop."
+tags: ["cyberdeck", "deepseek-harness", "python", "textual", "agentic-coding"]  
+categories: ["Engineering"]  
+summary: "How a four-pane terminal, a headless AI harness, and a stubborn refusal to trust the agent's own report turned copy-paste coding into a verified loop."  
 
 
 I have a folder of Python scripts that do real work: parse an Obsidian vault, generate filenames, convert notes, index a knowledge base. They were written over months, mostly by pasting code out of a chat window, reading the errors, and pasting the fix back. It works. It is also exhausting, and it does not scale past about four files.
