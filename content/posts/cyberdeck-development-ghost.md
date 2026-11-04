@@ -168,4 +168,4 @@ The design that made it work was not the TUI and not the model. It was the refus
 
 ---
 
-*The full source and setup guide are in the [documentation](/docs/cyberdeck-terminal/). The harness is [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), currently in developer preview — expect breaking changes, pin your versions, and keep `DSH_HOME` isolated per environment.*
+*The full source and setup guide are in the following pages listed. The harness is [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), currently in developer preview — expect breaking changes, pin your versions, and keep `DSH_HOME` isolated per environment.*

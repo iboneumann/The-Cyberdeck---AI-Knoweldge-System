@@ -2,7 +2,8 @@
 title = "Installation"
 date = "2026-11-04"
 draft = false
-weight = 120
+weight = 54
+tags = ["cyberdeck", "documentation"]
 +++
 
 Every step below ends with a check. Do not proceed past a failed check — later steps

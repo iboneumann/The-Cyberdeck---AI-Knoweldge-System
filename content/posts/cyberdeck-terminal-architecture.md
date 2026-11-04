@@ -2,7 +2,8 @@
 title = "Architecture"
 date = "2026-11-04"
 draft = false
-weight = 140
+weight = 52
+tags = ["cyberdeck", "documentation"]
 +++
 
 The design is a separation of concerns, and the separation is the point.

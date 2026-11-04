@@ -2,7 +2,8 @@
 title = "Source Code"
 date = "2026-11-04"
 draft = false
-weight = 150
+weight = 55
+tags = ["cyberdeck", "documentation"]
 +++
 
 MIT licensed, matching DeepSeek Harness. This is the current working state —

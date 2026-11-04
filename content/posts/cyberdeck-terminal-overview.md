@@ -2,7 +2,8 @@
 title = "Cyberdeck Terminal"
 date = "2026-11-04"
 draft = false
-weight = 110
+weight = 51
+tags = ["cyberdeck", "documentation"]
 +++
 
 A terminal development environment for Python scripts, built around one rule:

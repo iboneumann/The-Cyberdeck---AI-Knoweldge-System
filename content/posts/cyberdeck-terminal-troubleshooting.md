@@ -2,7 +2,7 @@
 title = "Troubleshooting"
 date = "2026-11-04"
 draft = false
-weight = 60
+weight = 56
 tags = ["cyberdeck", "troubleshooting"]
 summary = "The failures that cost the most time, what they actually mean, and the fix for each."
 +++
