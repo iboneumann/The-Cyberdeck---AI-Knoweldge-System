@@ -1,11 +1,10 @@
 +++
-date: 2026-11-04
-title: 'DeepSeek Harness on Ubuntu Server LTS: What Works and What Bites'
-draft: false
-weight: 50
+date = 2026-11-04
+title = 'DeepSeek Harness on Ubuntu Server LTS: What Works and What Bites'
+draft = false
+weight = 50
+Summary = "A field report on running dsh headless on Ubuntu 22.04 and 24.04: supported versions, the pnpm build-script trap, and how to isolate a development profile from a production one."  
 +++
-Summary: "A field report on running dsh headless on Ubuntu 22.04 and 24.04: supported versions, the pnpm build-script trap, and how to isolate a development profile from a production one."  
-
 
 DeepSeek Harness (`dsh`) is an open-source agent runtime from DeepSeek AI, built on an everything-is-a-plugin architecture and powered by [Cordis](https://github.com/cordiverse/cordis). It is not a model. It orchestrates agents, tools, plugins, and model providers.
 
