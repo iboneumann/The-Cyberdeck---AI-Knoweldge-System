@@ -1,10 +1,11 @@
 +++
-date = 2026-11-04
+date = '2026-11-04'
 title = 'Building a Development Ghost: A Four-Pane Terminal That Fixes Its Own Scripts'
 draft = false
 weight = 49
-Summary = "How a four-pane terminal, a headless AI harness, and a stubborn refusal to trust the agent's own report turned copy-paste coding into a verified loop."  
 +++
+Summary = How a four-pane terminal, a headless AI harness, and a stubborn refusal to trust the agent's own report turned copy-paste coding into a verified loop.  
+
 
 I have a folder of Python scripts that do real work: parse an Obsidian vault, generate filenames, convert notes, index a knowledge base. They were written over months, mostly by pasting code out of a chat window, reading the errors, and pasting the fix back. It works. It is also exhausting, and it does not scale past about four files.
 
