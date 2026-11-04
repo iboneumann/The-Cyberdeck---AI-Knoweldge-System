@@ -3,8 +3,6 @@ date: 2026-11-04
 title: 'Building a Development Ghost: A Four-Pane Terminal That Fixes Its Own Scripts'
 draft: false
 weight: 49
-tags: ["cyberdeck", "deepseek-harness", "python", "textual", "agentic-coding"]  
-categories: ["Engineering"]  
 +++
 Summary: "How a four-pane terminal, a headless AI harness, and a stubborn refusal to trust the agent's own report turned copy-paste coding into a verified loop."  
 

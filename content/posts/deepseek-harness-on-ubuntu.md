@@ -3,8 +3,6 @@ date: 2026-11-04
 title: 'DeepSeek Harness on Ubuntu Server LTS: What Works and What Bites'
 draft: false
 weight: 50
-tags: ["deepseek-harness", "ubuntu", "nodejs", "tooling"]  
-categories: ["Engineering"]  
 +++
 Summary: "A field report on running dsh headless on Ubuntu 22.04 and 24.04: supported versions, the pnpm build-script trap, and how to isolate a development profile from a production one."  
 
